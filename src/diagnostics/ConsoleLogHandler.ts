@@ -1,54 +1,54 @@
-namespace uxmid
+import { LogLevel, LogEntry, ILogHandler } from "./index";
+import { EnumUtils } from "../common";
+
+/**
+ * 表示一个基于控制台输出的日志处理程序。
+ * @class
+ * @version 1.0.0
+ */
+export default class ConsoleLogHandler implements ILogHandler
 {
     /**
-     * 表示一个基于控制台输出的日志处理程序。
-     * @class
-     * @version 1.0.0
+     * 处理日志项。
+     * @param  {LogEntry} entry 日志项。
+     * @returns void
      */
-    export class ConsoleLogHandler implements ILogHandler
+    public handle(entry: LogEntry): void
     {
-        /**
-         * 处理日志项。
-         * @param  {LogEntry} entry 日志项。
-         * @returns void
-         */
-        public handle(entry: LogEntry): void
+        let print: Function;
+        let level = EnumUtils.getEntry(entry.level, LogLevel);
+
+        switch(entry.level)
         {
-            let print: Function;
-            let level = EnumUtils.getEntry(entry.level, LogLevel);
-
-            switch(entry.level)
+            case LogLevel.debug:
             {
-                case LogLevel.debug:
-                {
-                    print = console.log;
+                print = console.log;
 
-                    break;
-                }
-                case LogLevel.warn:
-                {
-                    print = console.warn;
-
-                    break;
-                }
-                case LogLevel.error:
-                {
-                    print = console.error;
-
-                    break;
-                }
+                break;
             }
-
-            print(`[--------[${level.alias}] ${entry.timestamp.toLocaleString()}--------`);
-            print(entry.message);
-
-            if(entry.data)
+            case LogLevel.warn:
             {
-                print(entry.data);
-            }
+                print = console.warn;
 
-            print(entry.source);
-            print("----------------------------------------------]");
+                break;
+            }
+            case LogLevel.error:
+            {
+                print = console.error;
+
+                break;
+            }
         }
+
+        print(`[--------[${level.alias}] ${entry.timestamp.toLocaleString()}--------`);
+        print(entry.message);
+
+        if(entry.data)
+        {
+            print(entry.data);
+        }
+
+        print(entry.source);
+        print("----------------------------------------------]");
     }
 }

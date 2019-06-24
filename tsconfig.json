@@ -12,8 +12,9 @@
     "compilerOptions": 
     {
         "target": "es5",
+        "module": "es2015",
         "moduleResolution": "node",
-        "outFile": "bin/uxmid.js",
+        // "outFile": "bin/uxmid.js",
         "stripInternal": true,
         "pretty": true,
         "noImplicitAny": true,
