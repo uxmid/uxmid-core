@@ -1,6 +1,7 @@
 import { IEventProvider, EventArgs } from "./index";
 import { ArgumentException } from "../exceptions";
 import { Type } from "../runtime";
+import { Map } from "../collections";
 
 /**
  * 表示一个事件项。

@@ -1,6 +1,7 @@
 import BroadcastManager from "./BroadcastManager";
 import Broadcast from "./Broadcast";
 import { ArgumentException } from "../exceptions";
+import { Map } from "../collections";
 
 /**
  * 广播在传播过程中使用的上下文参数。

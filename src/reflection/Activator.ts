@@ -1,4 +1,5 @@
 import { Type } from "../runtime";
+import { Map } from "../collections";
 
 /**
  * 提供对象实例创建的方法。

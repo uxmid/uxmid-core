@@ -3,6 +3,7 @@
 import { InvalidOperationException } from "../exceptions";
 import { BroadcastContract, IBroadcastReceiver, BroadcastManager } from "./index";
 import { Activator } from "../reflection";
+import { Map } from "../collections";
 
 const receivers = new Map<Function, IBroadcastReceiver>();
 

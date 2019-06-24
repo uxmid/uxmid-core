@@ -1,6 +1,7 @@
 import { RegexUtils } from "../common";
 import { ArgumentException } from "../exceptions";
 import { BroadcastPriority } from "./index";
+import { Set } from "../collections";
 
 /**
  * 表示一个广播契约。

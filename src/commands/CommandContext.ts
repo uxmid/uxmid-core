@@ -1,5 +1,6 @@
 import { ICommandExecutor, CommandExpression, ICommand } from "./index";
 import { ArgumentException } from "../exceptions";
+import { Map } from "../collections";
 
 /**
  * 命令在执行器过程中使用的上下文参数。

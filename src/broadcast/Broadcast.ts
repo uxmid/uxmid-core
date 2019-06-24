@@ -1,5 +1,6 @@
 import { ArgumentException } from "../exceptions";
 import { RegexUtils } from "../common";
+import { Map } from "../collections";
 
 /**
  * 表示一条广播信息。

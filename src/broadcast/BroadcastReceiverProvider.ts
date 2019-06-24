@@ -1,6 +1,6 @@
 import { IBroadcastReceiverProvider, BroadcastReceiverEntry, IBroadcastReceiver, BroadcastContract, Broadcast } from "./index";
 import { ArgumentException } from "../exceptions";
-import { Set, IEnumerable } from "../collections";
+import { Set, Map, IEnumerable } from "../collections";
 
 /**
  * 提供用于检索广播接收器对象的机制。
@@ -87,10 +87,10 @@ export default class BroadcastReceiverProvider implements IBroadcastReceiverProv
                 receivers = new Set<IBroadcastReceiver>();
             
             // 根据优先级排序
-            entries.sort((a, b) => b.priority - a.priority);
+            entries.sort((a: BroadcastReceiverEntry, b: BroadcastReceiverEntry) => b.priority - a.priority);
             
             // 追加至返回列表中
-            entries.forEach(entry => receivers.add(entry.receiver));
+            entries.forEach((entry: BroadcastReceiverEntry) => receivers.add(entry.receiver));
             
             return receivers;
         }

@@ -1,3 +1,5 @@
+import { Map } from "../collections";
+
 /**
  * 提供一些常用类型检测与反射相关的方法。
  * @static
