@@ -1,5 +1,5 @@
 import { IDisposable } from "../runtime";
-import { ApplicationContextBase } from "../application/index";
+import { ApplicationContextBase } from "./index";
 
 /**
  * 向实现类提供应用扩展模块初始化和处置事件。

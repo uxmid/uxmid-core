@@ -1,5 +1,5 @@
 import { EventProvider, CancelEventArgs } from "../events";
-import { ApplicationContextBase } from "./application-context-base";
+import ApplicationContextBase from "./application-context-base";
 import { ArgumentException, InvalidOperationException } from "../exceptions";
 import { IWorkbench } from "../models";
 import { WorkbenchStatus } from "../enums";
@@ -10,7 +10,7 @@ import { WorkbenchStatus } from "../enums";
  * @class
  * @version 1.0.0
  */
-export abstract class WorkbenchBase extends EventProvider implements IWorkbench
+export default abstract class WorkbenchBase extends EventProvider implements IWorkbench
 {
     private _status: any;                                           // 工作台状态
     private _title: string;                                         // 工作台标题

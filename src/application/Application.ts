@@ -1,9 +1,9 @@
-import { ApplicationContextBase } from "./application-context-base";
-import { ApplicationEventArgs } from "./application-event-args";
+import ApplicationContextBase from "./application-context-base";
+import ApplicationEventArgs from "./application-event-args";
 import { IEventProvider, EventProvider, EventArgs, CancelEventArgs } from "../events";
 import { Logger } from "../diagnostics";
 import { ArgumentException } from "../exceptions";
-import { IApplicationModule } from "../models";
+import IApplicationModule from "./i-application-module";
 
 /**
  * 应用程序类，负责整个应用的启动和退出。
@@ -11,7 +11,7 @@ import { IApplicationModule } from "../models";
  * @class
  * @version 1.0.0
  */
-export class Application
+export default class Application
 {
     private static _isStarted: boolean = false;                         // 标识应用程序是否启动完成
     private static _context: ApplicationContextBase = null;             // 应用程序上下文实例

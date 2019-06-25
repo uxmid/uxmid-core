@@ -10,7 +10,7 @@
 
 import { assert } from "chai";
 import uxmid from "dist/uxmid";
-import Type = uxmid.Type;
+const Type = uxmid.Type;
 import { Employee, Person, Gender } from "../../models";
 
 describe("TypeTest", () =>

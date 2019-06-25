@@ -1,6 +1,6 @@
 import { EventProvider } from "../events";
 import { IWorker, WorkerStateChangedEventArgs } from "./index";
-import { WorkerState } from "./WorkerState";
+import { WorkerState } from "./worker-state";
 import { InvalidOperationException } from "../exceptions";
 
 /**

@@ -1,20 +1,9 @@
-import Enumerator from "./Enumerator";
-import IEnumerable from "./IEnumerable";
-import IEnumerator from "./IEnumerator";
-import IMap from "./IMap";
-import ISet from "./ISet";
-import KeyValuePair from "./KeyValuePair";
-import Map from "./Map";
-import Set from "./Set";
+export { default as Enumerator } from "./enumerator";
+export { default as KeyValuePair } from "./key-value-pair";
+export { default as Map } from "./map";
+export { default as Set } from "./set";
 
-export
-{
-    Enumerator,
-    IEnumerable,
-    IEnumerator,
-    IMap,
-    ISet,
-    KeyValuePair,
-    Map,
-    Set
-};
+export { default as ISet } from "./i-set";
+export { default as IMap } from "./i-map";
+export { default as IEnumerable } from "./i-enumerable";
+export { default as IEnumerator } from "./i-enumerator";

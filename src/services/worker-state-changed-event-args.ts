@@ -1,5 +1,5 @@
 import { EventArgs } from "../events";
-import { WorkerState } from "./WorkerState";
+import { WorkerState } from "./worker-state";
 
 /**
  * 表示工作器状态改变后的事件参数。

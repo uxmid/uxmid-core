@@ -1,4 +1,4 @@
-import ServiceStorageBase from "./ServiceStorageBase";
+import ServiceStorageBase from "./service-storage-base";
 import { ServiceEntry, IServiceProvider } from "./index";
 import { Type } from "../runtime";
 import { Set, Map, IEnumerator, IEnumerable } from "../collections";

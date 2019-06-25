@@ -1,5 +1,5 @@
 import { Map, IEnumerable, KeyValuePair, IEnumerator } from "../collections";
-import ICommand from "./ICommand";
+import ICommand from "./i-command";
 import { ArgumentException } from "../exceptions";
 
 /**

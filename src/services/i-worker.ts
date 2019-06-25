@@ -1,5 +1,5 @@
 import { IEventProvider } from "../events";
-import { WorkerState } from "./WorkerState";
+import { WorkerState } from "./worker-state";
 
 /**
  * 关于工作器的接口。

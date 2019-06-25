@@ -1,6 +1,1 @@
-import Activator from "./Activator";
-
-export
-{
-    Activator
-};
+export { default as Activator } from "./activator";

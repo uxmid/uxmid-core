@@ -1,4 +1,4 @@
-import IServiceProvider from "./IServiceProvider";
+import IServiceProvider from "./i-service-provider";
 
 /**
  * 提供关于服务供应程序容器的功能。

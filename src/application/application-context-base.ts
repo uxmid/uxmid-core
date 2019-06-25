@@ -13,7 +13,7 @@ const CREDENTIALL_SYMBOL: string = "__credential__";
  * @class
  * @version 1.0.0
  */
-export abstract class ApplicationContextBase
+export default abstract class ApplicationContextBase
 {
     private _applicationId: string;                             // 应用程序唯一代号
     private _title: string;                                     // 应用程序标题

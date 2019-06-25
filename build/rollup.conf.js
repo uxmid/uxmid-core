@@ -1,4 +1,5 @@
-const path = require("path");
+import path from "path";
+import commonjs from 'rollup-plugin-commonjs'
 
 export default {
     input: path.resolve(__dirname, "../dist/index.js"),
@@ -6,6 +7,11 @@ export default {
     {
         file: path.resolve(__dirname, "../dist/uxmid.js"),
         name: "uxmid",
-        format: 'cjs'
-    }
+        format: 'umd',
+        minify: true // 代码是否压缩
+    },
+    plugins:
+    [
+        commonjs()
+    ]
 };

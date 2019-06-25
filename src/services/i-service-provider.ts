@@ -1,4 +1,4 @@
-import IServiceStorage from "./IServiceStorage";
+import IServiceStorage from "./i-service-storage";
 import { IEnumerable } from "../collections";
 
 /**

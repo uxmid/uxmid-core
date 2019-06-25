@@ -1,14 +1,6 @@
-import ConsoleLogHandler from "./ConsoleLogHandler";
-import ILogHandler from "./ILogHandler";
-import LogEntry from "./LogEntry";
-import Logger from "./Logger";
-import { LogLevel } from "./LogLevel";
+export { default as asConsoleLogHandler } from "./console-log-handler";
+export { default as asILogHandler } from "./i-log-handler";
+export { default as asLogEntry } from "./log-entry";
+export { default as asLogger } from "./logger";
 
-export
-{
-    ConsoleLogHandler,
-    ILogHandler,
-    LogEntry,
-    Logger,
-    LogLevel
-};
+export { LogLevel } from "./log-level";

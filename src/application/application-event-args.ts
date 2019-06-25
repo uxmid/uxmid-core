@@ -1,11 +1,11 @@
-import { ApplicationContextBase } from "./application-context-base";
+import ApplicationContextBase from "./application-context-base";
 import { EventArgs } from "../events/index";
 /**
  * 应用程序事件参数类。
  * @class
  * @version 1.0.0
  */
-export class ApplicationEventArgs extends EventArgs
+export default class ApplicationEventArgs extends EventArgs
 {
     /**
      * 获取应用程序上下文实例。

@@ -1,10 +1,3 @@
-import LocalStorage from "./LocalStorage";
-import { PathAnchor } from "./PathAnchor";
-import StringReader from "./StringReader";
-
-export
-{
-    LocalStorage,
-    PathAnchor,
-    StringReader
-};
+export { default as LocalStorage } from "./local-storage";
+export { default as StringReader } from "./string-reader";
+export { default as PathAnchor } from "./path-anchor";

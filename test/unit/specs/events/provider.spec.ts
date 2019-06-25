@@ -11,8 +11,8 @@
 import { assert } from "chai";
 import { Promise } from "es6-promise";
 import uxmid from "dist/uxmid";
-import EventProvider = uxmid.EventProvider;
-import EventArgs = uxmid.EventArgs;
+const EventProvider = uxmid.EventProvider;
+const EventArgs = uxmid.EventArgs;
 
 class Button extends EventProvider
 {

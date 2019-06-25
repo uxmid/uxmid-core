@@ -1,4 +1,4 @@
-import Exception from "./Exception";
+import Exception from "./exception";
 
 /**
  * 当向方法提供的参数之一无效时引发的异常。

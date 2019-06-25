@@ -1,8 +1,2 @@
-import Type from "./Type";
-import IDisposable from "./IDisposable";
-
-export
-{
-    Type,
-    IDisposable
-};
+export { default as Type } from "./type";
+export { default as IDisposable } from "./i-disposable";

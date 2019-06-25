@@ -14,7 +14,7 @@
         "strict": true,
         "outDir": "./dist/",
         "target": "es5",
-        "module": "commonjs",
+        // "module": "",
         "moduleResolution": "node",
         "noLib": false,
         "preserveConstEnums": true,

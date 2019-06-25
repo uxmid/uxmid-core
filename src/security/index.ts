@@ -1,6 +1,1 @@
-import ICredential from "./ICredential";
-
-export
-{
-    ICredential
-};
+export { default as ICredential } from "./i-credential";
