@@ -1,11 +1,13 @@
 const path = require("path");
-const DeclarationBundlerPlugin = require("declaration-bundler-webpack-plugin");
 const resolve = _path => path.resolve(__dirname, "../", _path);
+
+// resolve(dist)
 
 module.exports =
 {
-    mode: "production",
-    entry: path.resolve(__dirname, "../src/index.ts"),
+    mode: "development",
+    // mode: "production",
+    entry: path.resolve(__dirname, "../dist/index.js"),
     output:
     {
         path: path.resolve(__dirname, "../dist"),
@@ -15,22 +17,26 @@ module.exports =
     {
         extensions: [".js", ".json", ".ts"]
     },
-    module:
-    {
-        rules:
-        [
-            {
-                test: /\.tsx?$/,
-                loader: "ts-loader",
-                exclude: /node_modules/,
-                include: [resolve("src"), resolve("test")]
-            },
-        ]
+    optimization: {
+        removeAvailableModules: false,
+        removeEmptyChunks: false,
+        splitChunks: false
     },
-    plugins: [
-        new DeclarationBundlerPlugin({
-            moduleName: 'uxmid',
-            out:'./builds/bundle.d.ts',
-        })
-    ]
+    // module:
+    // {
+    //     rules:
+    //     [
+    //         {
+    //             test: /\.tsx?$/,
+    //             loader: "ts-loader",
+    //             exclude: /node_modules/,
+    //             include: [resolve("src")],
+    //             options:
+    //             {
+    //                 transpileOnly: true,
+    //                 experimentalWatchApi: true,
+    //             }
+    //         },
+    //     ]
+    // }
 };

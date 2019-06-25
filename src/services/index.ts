@@ -1,4 +1,4 @@
-import Decorators from "./Decorators";
+import Injectable from "./injectable";
 import IServiceBuilder from "./IServiceBuilder";
 import IServiceProvider from "./IServiceProvider";
 import IServiceProviderFactory from "./IServiceProviderFactory";
@@ -15,7 +15,7 @@ import WorkerStateChangedEventArgs from "./WorkerStateChangedEventArgs";
 
 export
 {
-    Decorators,
+    Injectable,
     IServiceBuilder,
     IServiceProvider,
     IServiceProviderFactory,

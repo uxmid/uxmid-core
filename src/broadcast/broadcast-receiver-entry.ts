@@ -1,5 +1,5 @@
-import BroadcastContract from "./BroadcastContract";
-import IBroadcastReceiver from "./IBroadcastReceiver";
+import BroadcastContract from "./broadcast-contract";
+import IBroadcastReceiver from "../models/broadcast-receiver";
 
 /**
  * 提供用于检索广播接收器广播项。

@@ -1,9 +1,10 @@
 /// <reference path="../collections/Map" />
 
 import { InvalidOperationException } from "../exceptions";
-import { BroadcastContract, IBroadcastReceiver, BroadcastManager } from "./index";
+import { BroadcastContract, BroadcastManager } from "./index";
 import { Activator } from "../reflection";
 import { Map } from "../collections";
+import { IBroadcastReceiver } from "../models";
 
 const receivers = new Map<Function, IBroadcastReceiver>();
 

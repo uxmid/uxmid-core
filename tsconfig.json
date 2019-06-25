@@ -11,10 +11,15 @@
     ],
     "compilerOptions": 
     {
+        "strict": true,
+        "outDir": "./dist/",
         "target": "es5",
-        "module": "es2015",
+        "module": "commonjs",
         "moduleResolution": "node",
+        "noLib": false,
+        "preserveConstEnums": true,
         // "outFile": "bin/uxmid.js",
+        "removeComments": false,
         "stripInternal": true,
         "pretty": true,
         "noImplicitAny": true,

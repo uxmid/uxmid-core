@@ -17,7 +17,7 @@ const spinner = ora(`/*!
 */`);
 spinner.start();
 
-rm(path.join("./dist/"), error =>
+rm(path.join("./dist/d/"), error =>
 {
     if(error)
     {

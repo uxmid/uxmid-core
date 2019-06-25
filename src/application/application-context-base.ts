@@ -1,5 +1,5 @@
 
-import { IApplicationModule, IWorkbench } from "./index";
+import { IApplicationModule, IWorkbench } from "../models";
 import { Set, Map, ISet, IMap } from "../collections";
 import { ICredential } from "../security";
 import { ArgumentException, InvalidOperationException } from "../exceptions";
@@ -13,7 +13,7 @@ const CREDENTIALL_SYMBOL: string = "__credential__";
  * @class
  * @version 1.0.0
  */
-export default abstract class ApplicationContextBase
+export abstract class ApplicationContextBase
 {
     private _applicationId: string;                             // 应用程序唯一代号
     private _title: string;                                     // 应用程序标题

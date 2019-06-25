@@ -10,6 +10,7 @@
 
 import { assert } from "chai";
 import uxmid from "dist/uxmid";
+console.log("----------------------", uxmid);
 import Type = uxmid.Type;
 import Set = uxmid.Set;
 import ServiceProvider = uxmid.ServiceProvider;

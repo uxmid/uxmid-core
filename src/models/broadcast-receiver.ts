@@ -1,4 +1,4 @@
-import { BroadcastContext } from "./index";
+import { BroadcastContext } from "../broadcast/index";
 
 /**
  * 广播接收器接口。

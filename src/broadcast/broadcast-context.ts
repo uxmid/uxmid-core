@@ -1,5 +1,5 @@
-import BroadcastManager from "./BroadcastManager";
-import Broadcast from "./Broadcast";
+import BroadcastManager from "./broadcast-manager";
+import Broadcast from "./broadcast";
 import { ArgumentException } from "../exceptions";
 import { Map } from "../collections";
 

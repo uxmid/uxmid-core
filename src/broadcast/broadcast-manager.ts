@@ -2,13 +2,12 @@ import { IEventProvider, EventProvider } from "../events";
 import { Logger } from "../diagnostics";
 import { ArgumentException } from "../exceptions";
 import {
-    IBroadcastReceiverProvider,
     Broadcast,
     BroadcastContext,
     BroadcastContract,
-    BroadcastReceiverProvider,
-    IBroadcastReceiver
+    BroadcastReceiverProvider
 } from "./index";
+import { IBroadcastReceiverProvider, IBroadcastReceiver } from "../models";
 
 /**
  * 提供用于广播注册发布等功能。

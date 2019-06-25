@@ -1,5 +1,6 @@
-import { BroadcastContract, IBroadcastReceiver, Broadcast } from "./index";
 import { IEnumerable } from "../collections";
+import { BroadcastContract, Broadcast } from "../broadcast";
+import IBroadcastReceiver from "./broadcast-receiver";
 
 /**
  * 定义用于检索广播接收器对象的机制。

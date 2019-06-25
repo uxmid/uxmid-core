@@ -6,7 +6,7 @@ import CommandExecutorContext from "./CommandExecutorContext";
 import CommandExpression from "./CommandExpression";
 import CommandExpressionParser from "./CommandExpressionParser";
 import CommandOptionCollection from "./CommandOptionCollection";
-import Decorators from "./Decorators";
+import Command from "./command";
 import ICommand from "./ICommand";
 import ICommandExecutor from "./ICommandExecutor";
 import ICommandExpressionParser from "./ICommandExpressionParser";
@@ -21,7 +21,7 @@ export
     CommandExpression,
     CommandExpressionParser,
     CommandOptionCollection,
-    Decorators,
+    Command,
     ICommand,
     ICommandExecutor,
     ICommandExpressionParser

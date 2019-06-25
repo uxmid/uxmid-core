@@ -7,6 +7,7 @@ const resolve = function(dir)
 
 module.exports =
 {
+    mode: "development",
     module:
     {
         rules:
@@ -14,7 +15,13 @@ module.exports =
             {
                 test: /\.ts$/,
                 exclude: /node_modules/,
-                loader: "ts-loader"
+                loader: "ts-loader",
+                include: [resolve("test")],
+                options:
+                {
+                    transpileOnly: true,
+                    experimentalWatchApi: true,
+                }
             }
         ]
     },
