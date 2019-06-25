@@ -10,9 +10,7 @@
 
 import { assert } from "chai";
 import { Promise } from "es6-promise";
-import uxmid from "dist/uxmid";
-const EventProvider = uxmid.EventProvider;
-const EventArgs = uxmid.EventArgs;
+import { EventProvider, EventArgs } from "dist/uxmid";
 
 class Button extends EventProvider
 {

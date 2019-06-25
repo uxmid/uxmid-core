@@ -9,9 +9,9 @@
  */
 
 import { assert } from "chai";
-import uxmid from "dist/uxmid";
-import PathAnchor = uxmid.PathAnchor;
-import CommandExpression = uxmid.CommandExpression;
+import { PathAnchor, CommandExpression } from "dist/uxmid";
+// const PathAnchor = uxmid.PathAnchor;
+// import CommandExpression = uxmid.CommandExpression;
 
 describe("CommandExpressionTest", () =>
 {

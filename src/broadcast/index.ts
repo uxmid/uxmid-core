@@ -17,3 +17,6 @@ export { BroadcastPriority } from "./broadcast-priority";
 export { default as BroadcastReceiverEntry } from "./broadcast-receiver-entry";
 export { default as BroadcastReceiverProvider } from "./broadcast-receiver-provider";
 export { default as Receivable } from "./receivable";
+
+export { default as IBroadcastReceiver } from "./i-broadcast-receiver";
+export { default as IBroadcastReceiverProvider } from "./i-broadcast-receiver-provider";

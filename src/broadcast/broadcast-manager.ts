@@ -5,9 +5,10 @@ import {
     Broadcast,
     BroadcastContext,
     BroadcastContract,
-    BroadcastReceiverProvider
+    BroadcastReceiverProvider,
+    IBroadcastReceiverProvider,
+    IBroadcastReceiver
 } from "./index";
-import { IBroadcastReceiverProvider, IBroadcastReceiver } from "../models";
 
 /**
  * 提供用于广播注册发布等功能。

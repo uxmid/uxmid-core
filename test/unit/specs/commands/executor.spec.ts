@@ -10,9 +10,7 @@
 
 import { assert } from "chai";
 import { Promise, polyfill } from "es6-promise";
-import uxmid from "dist/uxmid";
-import Type = uxmid.Type;
-import CommandExecutor = uxmid.CommandExecutor;
+import { CommandExecutor } from "dist/uxmid";
 import SendCommand from "./sms/send-command";
 
 polyfill();

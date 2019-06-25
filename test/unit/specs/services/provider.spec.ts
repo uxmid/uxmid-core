@@ -9,14 +9,13 @@
  */
 
 import { assert } from "chai";
-import uxmid from "dist/uxmid";
-console.log("----------------------", uxmid);
-import Type = uxmid.Type;
-import Set = uxmid.Set;
-import ServiceProvider = uxmid.ServiceProvider;
-import ServiceProviderFactory = uxmid.ServiceProviderFactory;
-import IWorker = uxmid.IWorker;
-import WorkerBase = uxmid.WorkerBase;
+import { Set, ServiceProvider, ServiceProviderFactory, IWorker, WorkerBase } from "dist/uxmid";
+// import Type = uxmid.Type;
+// import Set = uxmid.Set;
+// const ServiceProvider = uxmid.ServiceProvider;
+// const ServiceProviderFactory = uxmid.ServiceProviderFactory;
+// const IWorker = uxmid.IWorker;
+// const WorkerBase = uxmid.WorkerBase;
 import BroadcastWorker from "./workers/broadcast_worker";
 import HeartbeatWorker from "./workers/heartbeat_worker";
 import MessageWorker from "./workers/message_worker";

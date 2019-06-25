@@ -9,10 +9,10 @@
  */
 
 import { assert } from "chai";
-import uxmid, { EventArgs } from "dist/uxmid";
+import uxmid, { EventArgs, EventProviderFactory } from "dist/uxmid";
 // import { EventArgs } = uxmid.EventArgs;
 // import EventProvider = uxmid.EventProvider;
-import EventProviderFactory = uxmid.EventProviderFactory;
+// import EventProviderFactory = uxmid.EventProviderFactory;
 
 class Button
 {

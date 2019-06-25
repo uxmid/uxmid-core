@@ -1,5 +1,5 @@
 import { IEventProvider } from "../events";
-import { WorkbenchStatus } from "../enums";
+import { WorkbenchStatus } from "./index";
 
 /**
  * 表示工作台的接口，包含对工作台的基本行为特性的定义。

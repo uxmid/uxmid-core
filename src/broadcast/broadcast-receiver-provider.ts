@@ -1,7 +1,6 @@
-import { BroadcastReceiverEntry, BroadcastContract, Broadcast } from "./index";
+import { BroadcastReceiverEntry, BroadcastContract, Broadcast, IBroadcastReceiverProvider, IBroadcastReceiver } from "./index";
 import { ArgumentException } from "../exceptions";
 import { Set, Map, IEnumerable } from "../collections";
-import { IBroadcastReceiverProvider, IBroadcastReceiver } from "../models";
 
 /**
  * 提供用于检索广播接收器对象的机制。

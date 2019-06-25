@@ -12,7 +12,7 @@
         "b": "browserify --node --standalone ts-promise ./dist/index.js > ./dist/uxmid.js",
         "mini": "uglifyjs ./dist/uxmid.js --compress --mangle --mangle-props --mangle-regex='/^_/' --reserved 'Promise' > ./dist/uxmid.min.js",
         "unit": "karma start test/unit/karma.conf.js",
-        "test": "node test/unit/webpack.config.js && npm run unit"
+        "test": "npm run unit"
     },
     "files": [
         "dist"

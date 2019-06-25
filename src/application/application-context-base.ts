@@ -1,5 +1,5 @@
 
-import { IApplicationModule, IWorkbench } from "../models";
+import { IApplicationModule, IWorkbench } from "./index";
 import { Set, Map, ISet, IMap } from "../collections";
 import { ICredential } from "../security";
 import { ArgumentException, InvalidOperationException } from "../exceptions";

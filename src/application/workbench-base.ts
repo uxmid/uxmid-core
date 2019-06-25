@@ -1,8 +1,7 @@
 import { EventProvider, CancelEventArgs } from "../events";
 import ApplicationContextBase from "./application-context-base";
 import { ArgumentException, InvalidOperationException } from "../exceptions";
-import { IWorkbench } from "../models";
-import { WorkbenchStatus } from "../enums";
+import { IWorkbench, WorkbenchStatus } from "./index";
 
 /**
  * 提供工作台的基本封装，建议自定义工作台从此类继承。
