@@ -1,7 +1,9 @@
 import { InvalidOperationException } from "../exceptions";
 import { Type } from "../runtime";
-import { ICommand, CommandExecutor, CommandBase } from "./index";
 import { Activator } from "../reflection";
+import CommandBase from "./command-base";
+import ICommand from "./i-command";
+import CommandExecutor from "./command-executor";
 
 /**
  * 标注当前类型是一个可通过命令执行器执行的命令。

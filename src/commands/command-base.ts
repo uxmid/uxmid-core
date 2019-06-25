@@ -1,7 +1,8 @@
-import { CommandContext, ICommand } from "./index";
 import { ArgumentException } from "../exceptions";
 import { StringUtils } from "../common";
 import { Type } from "../runtime";
+import CommandContext from "./command-context";
+import ICommand from "./i-command";
 
 /**
  * 提供实现 ICommand 接口功能的基类。

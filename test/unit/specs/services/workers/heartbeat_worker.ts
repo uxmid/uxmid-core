@@ -9,11 +9,7 @@
  */
 
 import { assert } from "chai";
-import uxmid from "dist/uxmid";
-import Type = uxmid.Type;
-import IWorker = uxmid.IWorker;
-import WorkerBase = uxmid.WorkerBase;
-import WorkerStateChangedEventArgs = uxmid.WorkerStateChangedEventArgs;
+import { WorkerBase, WorkerStateChangedEventArgs } from "dist/uxmid";
 
 export default class HeartbeatWorker extends WorkerBase
 {
@@ -27,9 +23,9 @@ export default class HeartbeatWorker extends WorkerBase
      * @protected
      * @override
      * @param  {Array<string>} ...args
-     * @returns void
+     * @returns any
      */
-    protected onStart(...args: Array<string>): void
+    protected onStart(...args: Array<string>): any
     {
         // todo
     }
@@ -39,9 +35,9 @@ export default class HeartbeatWorker extends WorkerBase
      * @protected
      * @override
      * @param  {Array<string>} ...args
-     * @returns void
+     * @returns any
      */
-    protected onStop(...args: Array<string>): void
+    protected onStop(...args: Array<string>): any
     {
         // todo
     }

@@ -1,5 +1,5 @@
 import { IEnumerable } from "../collections";
-import { ServiceEntry } from "./index";
+import ServiceEntry from "./service-entry";
 
 /**
  * 表示实现该接口的是一个服务项仓储。

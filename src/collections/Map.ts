@@ -1,4 +1,8 @@
-import { KeyValuePair, IEnumerable, IMap, IEnumerator, Enumerator } from "./index";
+import IMap from "./i-map";
+import IEnumerator from "./i-enumerator";
+import KeyValuePair from "./key-value-pair";
+import Enumerator from "./enumerator";
+import IEnumerable from "./i-enumerable";
 
 /**
  * 表示一个用于存储键值对的数据结构。

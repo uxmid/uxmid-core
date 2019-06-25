@@ -1,8 +1,9 @@
 import ServiceStorageBase from "./service-storage-base";
-import { ServiceEntry, IServiceProvider } from "./index";
 import { Type } from "../runtime";
 import { Set, Map, IEnumerator, IEnumerable } from "../collections";
 import { ArgumentException } from "../exceptions";
+import ServiceEntry from "./service-entry";
+import IServiceProvider from "./i-service-provider";
 
 /**
  * 表示一个用于存取服务项的仓储容器。

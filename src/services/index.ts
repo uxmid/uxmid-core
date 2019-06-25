@@ -20,8 +20,8 @@ export { default as WorkerStateChangedEventArgs } from "./worker-state-changed-e
 
 export { WorkerState } from "./worker-state";
 
-export { default as IServiceBuilderType } from "./i-service-builder";
-export { default as IServiceProviderType } from "./i-service-provider";
-export { default as IServiceProviderFactoryType } from "./i-service-provider-factory";
-export { default as IServiceStorageType } from "./i-service-storage";
-export { default as IWorkerType } from "./i-worker";
+export { default as IServiceBuilder } from "./i-service-builder";
+export { default as IServiceProvider } from "./i-service-provider";
+export { default as IServiceProviderFactory } from "./i-service-provider-factory";
+export { default as IServiceStorage } from "./i-service-storage";
+export { default as IWorker } from "./i-worker";

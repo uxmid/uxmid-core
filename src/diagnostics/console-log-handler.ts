@@ -1,5 +1,7 @@
-import { LogLevel, LogEntry, ILogHandler } from "./index";
 import { EnumUtils } from "../common";
+import ILogHandler from "./i-log-handler";
+import LogEntry from "./log-entry";
+import { LogLevel } from "./log-level";
 
 /**
  * 表示一个基于控制台输出的日志处理程序。

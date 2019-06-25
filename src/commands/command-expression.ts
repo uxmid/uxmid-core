@@ -1,8 +1,9 @@
-import { CommandExpressionParser, CommandOptionCollection } from "./index";
 import { PathAnchor } from "../io";
 import { StringUtils } from "../common";
 import { ArgumentException } from "../exceptions";
 import { Map } from "../collections";
+import CommandOptionCollection from "./command-option-collection";
+import CommandExpressionParser from "./command-expression-parser";
 
 /**
  * 命令表达式类，提供命令的名称路径与参数选项等信息。

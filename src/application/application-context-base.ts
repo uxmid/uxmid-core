@@ -1,10 +1,11 @@
 
-import { IApplicationModule, IWorkbench } from "./index";
 import { Set, Map, ISet, IMap } from "../collections";
 import { ICredential } from "../security";
 import { ArgumentException, InvalidOperationException } from "../exceptions";
 import { LocalStorage } from "../io";
 import { ServiceProviderFactory, IServiceProviderFactory } from "../services";
+import IApplicationModule from "./i-application-module";
+import IWorkbench from "./i-workbench";
 
 const CREDENTIALL_SYMBOL: string = "__credential__";
 

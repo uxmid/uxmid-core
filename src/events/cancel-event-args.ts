@@ -1,4 +1,4 @@
-import { EventArgs } from "./index";
+import EventArgs from "./event-args";
 
 /**
  * 为可取消的事件提供数据。

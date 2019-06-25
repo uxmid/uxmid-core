@@ -1,7 +1,9 @@
 import { InvalidOperationException } from "../exceptions";
-import { BroadcastContract, BroadcastManager, IBroadcastReceiver } from "./index";
 import { Activator } from "../reflection";
 import { Map } from "../collections";
+import IBroadcastReceiver from "./i-broadcast-receiver";
+import BroadcastContract from "./broadcast-contract";
+import BroadcastManager from "./broadcast-manager";
 
 const receivers = new Map<Function, IBroadcastReceiver>();
 

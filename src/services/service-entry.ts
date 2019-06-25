@@ -1,6 +1,6 @@
-import { IServiceBuilder } from "./index";
 import { Type } from "../runtime";
 import { Activator } from "../reflection";
+import IServiceBuilder from "./i-service-builder";
 
 /**
  * 表示一个用于存取服务使用的服务项。

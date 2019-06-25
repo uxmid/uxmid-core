@@ -1,7 +1,7 @@
-import { EnumEntry } from "./index";
 import { ArgumentException } from "../exceptions";
 import { Type } from "../runtime";
 import { Map } from "../collections";
+import EnumEntry from "./enum-entry";
 
 /**
  * 关于的枚举辅助工具类。

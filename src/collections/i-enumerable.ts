@@ -1,4 +1,4 @@
-import { IEnumerator } from "./index";
+import IEnumerator from "./i-enumerator";
 
 /**
  * 表示实现该接口的是一个可枚举的类型。

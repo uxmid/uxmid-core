@@ -1,4 +1,5 @@
-import { IEnumerable, IEnumerator } from "./index";
+import IEnumerable from "./i-enumerable";
+import IEnumerator from "./i-enumerator";
 
 /**
  * 表示一个强类型列表。提供用于对列表进行搜索、排序和操作的方法。

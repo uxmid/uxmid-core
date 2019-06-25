@@ -9,10 +9,7 @@
  */
 
 import { assert } from "chai";
-import uxmid, { EventArgs, EventProviderFactory } from "dist/uxmid";
-// import { EventArgs } = uxmid.EventArgs;
-// import EventProvider = uxmid.EventProvider;
-// import EventProviderFactory = uxmid.EventProviderFactory;
+import { EventArgs, EventProviderFactory } from "dist/uxmid";
 
 class Button
 {
@@ -41,6 +38,8 @@ describe("EventProviderFactoryTest", () =>
         
         assert.isNotNull(provider1);
         assert.isNotNull(provider2);
+
+        console.log("-------------------EventArgs", EventArgs);
 
         provider1.addListener("something", (e: EventArgs) => { console.log(e); });
 

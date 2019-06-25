@@ -1,4 +1,4 @@
-import { IEventProvider } from "./index";
+import IEventProvider from "./i-eventProvider";
 
 /**
  * 提供关于事件提供程序的功能。

@@ -1,4 +1,4 @@
-import { LogEntry } from "./index";
+import LogEntry from "./log-entry";
 
 /**
  * 表示实现该接口的是一个日志处理程序。

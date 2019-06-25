@@ -1,7 +1,11 @@
-import { IServiceStorage, IServiceProvider, ServiceEntry, ServiceProviderFactory, ServiceProvider } from "./index";
 import { ArgumentException } from "../exceptions";
 import { Type } from "../runtime";
 import { IEnumerable, IEnumerator, ISet, Set } from "../collections";
+import IServiceStorage from "./i-service-storage";
+import IServiceProvider from "./i-service-provider";
+import ServiceEntry from "./service-entry";
+import ServiceProviderFactory from "./service-provider-factory";
+import ServiceProvider from "./service-provider";
 
 /**
  * 服务仓储基类。

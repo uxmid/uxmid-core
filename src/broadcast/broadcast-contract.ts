@@ -1,7 +1,7 @@
 import { RegexUtils } from "../common";
 import { ArgumentException } from "../exceptions";
-import { BroadcastPriority } from "./index";
 import { Set } from "../collections";
+import { BroadcastPriority } from './broadcast-priority';
 
 /**
  * 表示一个广播契约。

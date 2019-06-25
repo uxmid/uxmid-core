@@ -2,7 +2,8 @@ import { KeyValuePair, Set, Map } from "../collections";
 import { CharUtils } from "../common";
 import { InvalidOperationException } from "../exceptions";
 import { StringReader, PathAnchor } from "../io";
-import { CommandExpression, ICommandExpressionParser } from "./index";
+import ICommandExpressionParser from "./i-commandExpressionParser";
+import CommandExpression from "./command-expression";
 
 const enum CommandPathState
 {

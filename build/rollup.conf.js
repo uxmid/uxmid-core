@@ -1,5 +1,6 @@
 import path from "path";
 import commonjs from 'rollup-plugin-commonjs';
+const version = process.env.VERSION || require("../package.json").version;
 
 const banner =
 `/*!
@@ -23,7 +24,7 @@ export default {
         name: "uxmid",
         format: 'umd',
         banner,
-        minify: true // 代码是否压缩
+        // minify: true // 代码是否压缩
     },
     plugins:
     [

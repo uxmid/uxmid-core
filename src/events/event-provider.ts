@@ -1,7 +1,8 @@
-import { IEventProvider, EventArgs } from "./index";
 import { ArgumentException } from "../exceptions";
 import { Type } from "../runtime";
 import { Map } from "../collections";
+import EventArgs from "./event-args";
+import IEventProvider from "./i-eventProvider";
 
 /**
  * 表示一个事件项。

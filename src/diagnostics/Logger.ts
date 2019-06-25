@@ -1,5 +1,7 @@
-import { ILogHandler, LogLevel, LogEntry } from "./index";
 import { ISet, Set } from "../collections";
+import ILogHandler from "./i-log-handler";
+import { LogLevel } from "./log-level";
+import LogEntry from "./log-entry";
 
 /**
  * 提供日志记录的功能。

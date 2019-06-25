@@ -1,5 +1,6 @@
 import { ArgumentException } from "../exceptions";
-import { ICommandExecutor, CommandExpression } from "./index";
+import ICommandExecutor from "./i-commandExecutor";
+import CommandExpression from "./command-expression";
 
 /**
  * 表示命令执行器在执行命令时产生的上下文。

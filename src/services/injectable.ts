@@ -1,4 +1,4 @@
-import { ServiceProviderFactory } from "./index";
+import ServiceProviderFactory from "./service-provider-factory";
 
 /**
  * 标注当前类型是一个可注入的服务。

@@ -1,8 +1,12 @@
-import { IServiceProvider, IServiceStorage, IServiceBuilder, ServiceStorage, ServiceEntry } from "./index";
 import { Type } from "../runtime";
 import { ArgumentException } from "../exceptions";
 import { Set, IEnumerable } from "../collections";
 import { Activator } from "../reflection";
+import IServiceProvider from "./i-service-provider";
+import IServiceStorage from "./i-service-storage";
+import IServiceBuilder from "./i-service-builder";
+import ServiceStorage from "./service-storage";
+import ServiceEntry from "./service-entry";
 
 /**
  * 用于检索服务对象的提供程序。

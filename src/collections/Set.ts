@@ -1,4 +1,7 @@
-import { ISet, IEnumerable, Enumerator, IEnumerator } from "./index";
+import ISet from "./i-set";
+import IEnumerator from "./i-enumerator";
+import Enumerator from "./enumerator";
+import IEnumerable from "./i-enumerable";
 
 /**
  * 表示一个强类型列表。提供用于对列表进行搜索、排序和操作的方法。

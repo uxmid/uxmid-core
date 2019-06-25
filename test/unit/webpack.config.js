@@ -15,13 +15,7 @@ module.exports =
             {
                 test: /\.ts$/,
                 exclude: /node_modules/,
-                loader: "ts-loader",
-                include: [resolve("test")],
-                options:
-                {
-                    transpileOnly: true,
-                    experimentalWatchApi: true,
-                }
+                loader: "ts-loader"
             }
         ]
     },

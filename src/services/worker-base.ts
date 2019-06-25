@@ -1,7 +1,8 @@
 import { EventProvider } from "../events";
-import { IWorker, WorkerStateChangedEventArgs } from "./index";
 import { WorkerState } from "./worker-state";
 import { InvalidOperationException } from "../exceptions";
+import IWorker from "./i-worker";
+import WorkerStateChangedEventArgs from "./worker-state-changed-event-args";
 
 /**
  * 关于工作器的抽象类。

@@ -1,4 +1,4 @@
-import { CommandExpression } from "./index";
+import CommandExpression from "./command-expression";
 
 /**
  * 提供命令行文本解析功能。

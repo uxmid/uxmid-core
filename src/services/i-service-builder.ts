@@ -1,4 +1,4 @@
-import { ServiceEntry } from "./index";
+import ServiceEntry from "./service-entry";
 
 /**
  * 定义用于生成服务实例的机制。

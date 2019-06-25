@@ -1,4 +1,4 @@
-import { LogLevel } from "./index";
+import { LogLevel } from "./log-level";
 
 /**
  * 表示一个日志项。

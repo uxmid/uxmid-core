@@ -1,7 +1,9 @@
-import { IServiceProviderFactory, IServiceProvider, ServiceProvider } from "./index";
 import { IEnumerable, KeyValuePair, IEnumerator, Map } from "../collections";
 import { ArgumentException } from "../exceptions";
 import { Type } from "../runtime";
+import IServiceProviderFactory from "./i-service-provider-factory";
+import IServiceProvider from "./i-service-provider";
+import ServiceProvider from "./service-provider";
 
 /**
  * 提供关于服务供应程序容器的功能。

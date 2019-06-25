@@ -8,7 +8,7 @@
  * Copyright (C) 2010-2017 Uxmid Inc. All rights reserved. 
  */
 
-import fw from "dist/uxmid";
+import { Type } from "dist/uxmid";
 
 /**
  * 表示一个性别枚举。
@@ -33,7 +33,7 @@ enum Gender
  * 定义枚举元数据。
  * @define
  */
-fw.Type.setMetadata(Gender,
+Type.setMetadata(Gender,
 // tslint:disable-next-line:align
 {
     male:

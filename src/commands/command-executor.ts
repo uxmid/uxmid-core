@@ -1,6 +1,13 @@
-import { ICommandExecutor, CommandExpression, ICommand, CommandContext, CommandExecutorContext, ICommandExpressionParser, CommandCollection, CommandExpressionParser } from "./index";
 import { InvalidOperationException, ArgumentException } from "../exceptions";
 import { Logger } from "../diagnostics";
+import ICommandExecutor from "./i-commandExecutor";
+import CommandCollection from "./command-collection";
+import ICommandExpressionParser from "./i-commandExpressionParser";
+import CommandExpressionParser from "./command-expression-parser";
+import ICommand from "./i-command";
+import CommandExecutorContext from "./command-executor-context";
+import CommandExpression from "./command-expression";
+import CommandContext from "./command-context";
 
 /**
  * 提供命令注册与执行的实现。
