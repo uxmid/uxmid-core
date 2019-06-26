@@ -1,6 +1,6 @@
 {
     "name": "uxmid-core",
-    "version": "1.1.0",
+    "version": "1.0.0",
     "description": "uxmid core library.",
     "scripts": {
         "lint": "tslint src/**/*.ts",
@@ -12,8 +12,8 @@
         "test": "npm run unit"
     },
     "files": [
-        "bin",
-        "types"
+        "dist",
+        "src"
     ],
     "main": "dist/uxmid.js",
     "typings": "types/uxmid.d.ts",
@@ -26,10 +26,10 @@
     "homepage": "http://www.uxmid.com",
     "repository": {
         "type": "git",
-        "url": "https://github.com/uxmid/uxmid.core.git"
+        "url": "https://github.com/uxmid/uxmid-core.git"
     },
     "bugs": {
-        "url": "https://github.com/uxmid/uxmid.core/issues"
+        "url": "https://github.com/uxmid/uxmid-core/issues"
     },
     "devDependencies": {
         "@types/chai": "^4.0.4",
