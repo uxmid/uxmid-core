@@ -1,5 +1,5 @@
 
-## Uxmid Core Library
+## UXmid Core Library
 
 [![NPM version](https://img.shields.io/npm/v/uxmid-core.svg?style=flat)](https://www.npmjs.com/package/uxmid-core)
 

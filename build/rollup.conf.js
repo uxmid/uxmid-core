@@ -13,7 +13,7 @@ const banner =
  * @Date:  2019-06-25 16:05:55
  * @version: 1.0.0
  * Licensed under the MIT License.
- * Copyright (C) 2010-${new Date().getFullYear()} Uxmid Inc. All rights reserved. 
+ * Copyright (C) 2010-${new Date().getFullYear()} UXmid Inc. All rights reserved. 
  */`;
 
 module.exports = 
