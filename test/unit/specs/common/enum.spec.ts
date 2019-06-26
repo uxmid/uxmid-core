@@ -10,8 +10,8 @@
 
 import { assert } from "chai";
 import uxmid from "dist/uxmid";
-import EnumEntry = uxmid.EnumEntry;
-import EnumUtils = uxmid.EnumUtils;
+const EnumEntry = uxmid.EnumEntry;
+const EnumUtils = uxmid.EnumUtils;
 import Gender from "../../models/gender";
 
 describe("EnumTest", () =>

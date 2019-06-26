@@ -11,9 +11,16 @@
     ],
     "compilerOptions": 
     {
+        "strict": true,
+        "outDir": "./bin/",
         "target": "es5",
+        "module": "commonjs",
+        // "sourceMap": true,
         "moduleResolution": "node",
-        "outFile": "bin/uxmid.js",
+        "noLib": false,
+        "preserveConstEnums": true,
+        // "outFile": "bin/uxmid.js",
+        "removeComments": false,
         "stripInternal": true,
         "pretty": true,
         "noImplicitAny": true,

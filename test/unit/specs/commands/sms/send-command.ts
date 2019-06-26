@@ -8,10 +8,7 @@
  * Copyright (C) 2010-2017 Uxmid Inc. All rights reserved. 
  */
 
-import uxmid from "dist/uxmid";
-import StringUtils = uxmid.StringUtils;
-import CommandBase = uxmid.CommandBase;
-import CommandContext = uxmid.CommandContext;
+import { StringUtils, CommandBase, CommandContext } from "dist/uxmid";
 
 export default class SendCommand extends CommandBase<CommandContext>
 {

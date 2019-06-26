@@ -5,21 +5,13 @@ const chalk = require("chalk");
 const zlib = require("zlib");
 const uglify = require("uglify-js");
 const rollup = require("rollup");
-const replace = require("rollup-plugin-replace");
+
+const buildTsConf = require("./rollup.conf.js");
+const buildDeclareConf = require("./rollup.d.js");
+
 const version = process.env.VERSION || require("../package.json").version;
 const resolve = _path => path.resolve(__dirname, "../", _path);
 const distPath = resolve("dist/");
-
-const banner =
-`/*!
-* uxmid-core v${version} 
-* 
-* Authors:
-*      jason <jasonsoop@gmail.com>
-* 
-* Licensed under the MIT License.
-* Copyright (C) 2010-${new Date().getFullYear()} Uxmid Inc. All rights reserved. 
-*/`;
 
 const getSize = function(code)
 {
@@ -64,48 +56,14 @@ const write = function(dest, code, zip)
     })
 };
 
-const buildEntry = function({input, output})
+const buildEntry = async ({input, output}) =>
 {
-    const isProd = /min\.js$/.test(output.file);
-    
-    return rollup.rollup(input)
-        .then(bundle => bundle.generate(output))
-        .then(({code}) =>
-        {
-            // min 处理
-            if(isProd)
-            {
-                const minified = uglify.minify(code,
-                {
-                    output:
-                    {
-                        preamble: output.banner,
-                        ascii_only: true
-                    }
-                }).code;
+    const bundle = await rollup.rollup(input);
+    const result = await bundle.generate(output);
+    const { code } = result.output[0];
+    let minifyCode = "";
 
-                return write(output.file, minified, true);
-            }
-            else
-            {
-                return write(output.file, code);
-            }
-        })
-};
-
-const buildDeclaration = function()
-{
-    const sourceFile = resolve("bin/uxmid.d.ts");
-    const destPath = resolve("dist/uxmid.d.ts");
-    const readStream = fs.createReadStream(sourceFile);
-    const writeStream = fs.createWriteStream(destPath);
-
-    readStream.pipe(writeStream, { end: false});
-
-    readStream.on("end", () => 
-    {
-        writeStream.end("\nexport default uxmid;\n");
-    });
+    return write(output.file, minifyCode || code, true);
 };
 
 const build = function(builds)
@@ -128,7 +86,7 @@ const build = function(builds)
         .catch((error)=>
         {
             // 输出构建错误
-            console.log(chalk.red("Build failed with errors.\n"));
+            console.log(chalk.red("Build failed with errors.\n", error));
             
             // 退出进程
             process.exit(1);
@@ -136,35 +94,6 @@ const build = function(builds)
     }
 
     next();
-};
-
-const genConfig = function(opts)
-{
-    const config = 
-    {
-        input:
-        {
-            input: resolve("bin/uxmid.js"),
-            context: "this",
-            plugins: []
-        },
-        output: 
-        {
-            file: opts.file,
-            format: opts.format,
-            banner,
-            outro: opts.outro || "",
-            name: "uxmid",
-            exports: "named"
-        }
-    };
-
-    if(opts.env)
-    {
-        config.input.plugins.unshift(replace({"process.env.NODE_ENV": JSON.stringify(opts.env)}));
-    }
-
-    return config;
 };
 
 // 先清空构建目录
@@ -178,22 +107,6 @@ rimraf(distPath, (error) =>
     // 重新建立构建目录
     fs.mkdirSync("dist");
 
-    // 生成代码
-    build([
-        {
-            file: resolve("dist/uxmid.js"),
-            format: "umd",
-            outro: "exports['default'] = uxmid;",
-            env: 'development'
-        },
-        {
-            file: resolve("dist/uxmid.min.js"),
-            format: "umd",
-            outro: "exports['default'] = uxmid;",
-            env: 'production'
-        }
-    ].map(genConfig));
-
-    // 生成申明文件
-    buildDeclaration();
+    // 生成代码 及 声明文件
+    build([buildTsConf, buildDeclareConf]);    
 });

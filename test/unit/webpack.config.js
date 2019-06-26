@@ -7,6 +7,7 @@ const resolve = function(dir)
 
 module.exports =
 {
+    mode: "development",
     module:
     {
         rules:

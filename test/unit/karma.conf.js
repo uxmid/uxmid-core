@@ -9,19 +9,20 @@ module.exports = function(config)
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-        frameworks: ["mocha"],
+        frameworks: ["mocha", "chai"],
         
         // list of files / patterns to load in the browser
         files:
         [
-            "./index.js",
+            // "./index.js",
+            "specs/**/*.spec.ts"
         ],
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors:
         {
-            "./index.js": ["webpack"],
+            "specs/**/*.spec.ts": ["webpack", "coverage"],
         },
 
         // list of files to exclude
@@ -52,14 +53,25 @@ module.exports = function(config)
         [
             "karma-webpack",
             "karma-mocha",
+            "karma-chai",
             "karma-phantomjs-launcher",
-            "karma-mocha-reporter"
+            "karma-mocha-reporter",
+            "karma-coverage"
         ],
 
         // test results reporter to use
         // possible values: "dots", "progress"
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ["mocha"],
+        reporters: ["mocha", "coverage"],
+
+        // karma-coverage plugin options
+        coverageReporter: {
+            dir: './coverage',
+            reporters: [
+                { type: 'lcov', subdir: '.' },
+                { type: 'text-summary' }
+            ]
+        },
 
         // web server port
         port: 9876,
