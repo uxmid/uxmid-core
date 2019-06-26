@@ -1,5 +1,6 @@
 import ApplicationContextBase from "./application-context-base";
 import { EventArgs } from "../events/index";
+
 /**
  * 应用程序事件参数类。
  * @class
