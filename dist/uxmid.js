@@ -1,5 +1,5 @@
 /*!
- * uxmid-core v1.1.0 
+ * uxmid-core v1.0.0 
  *
  * @Authors:
  *      jason <jasonsoop@gmail.com>
@@ -8,7 +8,7 @@
  * @Date:  2019-06-25 16:05:55
  * @version: 1.0.0
  * Licensed under the MIT License.
- * Copyright (C) 2010-2019 Uxmid Inc. All rights reserved. 
+ * Copyright (C) 2010-2019 UXmid Inc. All rights reserved. 
  */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
@@ -27,6 +27,11 @@
 	}
 
 	var exception = createCommonjsModule(function (module, exports) {
+	/**
+	 * 表示在应用程序执行期间发生的错误。
+	 * @class
+	 * @version 1.0.0
+	 */
 	var __extends = (commonjsGlobal && commonjsGlobal.__extends) || (function () {
 	    var extendStatics = function (d, b) {
 	        extendStatics = Object.setPrototypeOf ||
@@ -41,11 +46,6 @@
 	    };
 	})();
 	Object.defineProperty(exports, "__esModule", { value: true });
-	/**
-	 * 表示在应用程序执行期间发生的错误。
-	 * @class
-	 * @version 1.0.0
-	 */
 	var Exception = /** @class */ (function (_super) {
 	    __extends(Exception, _super);
 	    function Exception(message) {
@@ -133,7 +133,7 @@
 	 * @Date:  2019-06-25 16:05:55
 	 * @version: 1.0.0
 	 * Licensed under the MIT License.
-	 * Copyright (C) 2010-present Uxmid Inc. All rights reserved.
+	 * Copyright (C) 2010-present UXmid Inc. All rights reserved.
 	 */
 	Object.defineProperty(exports, "__esModule", { value: true });
 
@@ -737,7 +737,7 @@
 	 * @Date:  2019-06-25 16:05:55
 	 * @version: 1.0.0
 	 * Licensed under the MIT License.
-	 * Copyright (C) 2010-present Uxmid Inc. All rights reserved.
+	 * Copyright (C) 2010-present UXmid Inc. All rights reserved.
 	 */
 	Object.defineProperty(exports, "__esModule", { value: true });
 
@@ -1076,7 +1076,7 @@
 	 * @Date:  2019-06-25 16:05:55
 	 * @version: 1.0.0
 	 * Licensed under the MIT License.
-	 * Copyright (C) 2010-present Uxmid Inc. All rights reserved.
+	 * Copyright (C) 2010-present UXmid Inc. All rights reserved.
 	 */
 	Object.defineProperty(exports, "__esModule", { value: true });
 
@@ -1341,7 +1341,7 @@
 	 * @Date:  2019-06-25 16:05:55
 	 * @version: 1.0.0
 	 * Licensed under the MIT License.
-	 * Copyright (C) 2010-present Uxmid Inc. All rights reserved.
+	 * Copyright (C) 2010-present UXmid Inc. All rights reserved.
 	 */
 	Object.defineProperty(exports, "__esModule", { value: true });
 
@@ -1623,7 +1623,7 @@
 	 * @Date:  2019-06-25 16:05:55
 	 * @version: 1.0.0
 	 * Licensed under the MIT License.
-	 * Copyright (C) 2010-present Uxmid Inc. All rights reserved.
+	 * Copyright (C) 2010-present UXmid Inc. All rights reserved.
 	 */
 	Object.defineProperty(exports, "__esModule", { value: true });
 
@@ -1926,7 +1926,7 @@
 	 * @Date:  2019-06-25 16:05:55
 	 * @version: 1.0.0
 	 * Licensed under the MIT License.
-	 * Copyright (C) 2010-present Uxmid Inc. All rights reserved.
+	 * Copyright (C) 2010-present UXmid Inc. All rights reserved.
 	 */
 	Object.defineProperty(exports, "__esModule", { value: true });
 
@@ -2434,7 +2434,7 @@
 	 * @Date:  2019-06-25 16:05:55
 	 * @version: 1.0.0
 	 * Licensed under the MIT License.
-	 * Copyright (C) 2010-present Uxmid Inc. All rights reserved.
+	 * Copyright (C) 2010-present UXmid Inc. All rights reserved.
 	 */
 	Object.defineProperty(exports, "__esModule", { value: true });
 
@@ -2516,7 +2516,7 @@
 	 * @Date:  2019-06-25 16:05:55
 	 * @version: 1.0.0
 	 * Licensed under the MIT License.
-	 * Copyright (C) 2010-present Uxmid Inc. All rights reserved.
+	 * Copyright (C) 2010-present UXmid Inc. All rights reserved.
 	 */
 	Object.defineProperty(exports, "__esModule", { value: true });
 
@@ -3893,7 +3893,7 @@
 	 * @Date:  2019-06-25 16:05:55
 	 * @version: 1.0.0
 	 * Licensed under the MIT License.
-	 * Copyright (C) 2010-present Uxmid Inc. All rights reserved.
+	 * Copyright (C) 2010-present UXmid Inc. All rights reserved.
 	 */
 	Object.defineProperty(exports, "__esModule", { value: true });
 
@@ -4600,12 +4600,12 @@
 	unwrapExports(workbenchBase);
 
 	var workbenchStatus = createCommonjsModule(function (module, exports) {
-	Object.defineProperty(exports, "__esModule", { value: true });
 	/**
 	 * 表示工作台的运行状态。
 	 * @enum
 	 * @version 1.0.0
 	 */
+	Object.defineProperty(exports, "__esModule", { value: true });
 	var WorkbenchStatus;
 	(function (WorkbenchStatus) {
 	    /**
@@ -4658,7 +4658,7 @@
 	 * @Date:  2019-06-25 16:05:55
 	 * @version: 1.0.0
 	 * Licensed under the MIT License.
-	 * Copyright (C) 2010-present Uxmid Inc. All rights reserved.
+	 * Copyright (C) 2010-present UXmid Inc. All rights reserved.
 	 */
 	Object.defineProperty(exports, "__esModule", { value: true });
 
@@ -5234,12 +5234,12 @@
 	unwrapExports(broadcastManager);
 
 	var broadcastPriority = createCommonjsModule(function (module, exports) {
-	Object.defineProperty(exports, "__esModule", { value: true });
 	/**
 	 * 表示广播接收的优先级别。
 	 * @enum
 	 * @version 1.0.0
 	 */
+	Object.defineProperty(exports, "__esModule", { value: true });
 	var BroadcastPriority;
 	(function (BroadcastPriority) {
 	    /**
@@ -5309,7 +5309,7 @@
 	 * @Date:  2019-06-25 16:05:55
 	 * @version: 1.0.0
 	 * Licensed under the MIT License.
-	 * Copyright (C) 2010-present Uxmid Inc. All rights reserved.
+	 * Copyright (C) 2010-present UXmid Inc. All rights reserved.
 	 */
 	Object.defineProperty(exports, "__esModule", { value: true });
 
@@ -6635,7 +6635,7 @@
 	 * @Date:  2019-06-25 16:05:55
 	 * @version: 1.0.0
 	 * Licensed under the MIT License.
-	 * Copyright (C) 2010-present Uxmid Inc. All rights reserved.
+	 * Copyright (C) 2010-present UXmid Inc. All rights reserved.
 	 */
 	Object.defineProperty(exports, "__esModule", { value: true });
 
@@ -6678,7 +6678,7 @@
 	 * @Date:  2019-06-25 16:05:55
 	 * @version: 1.0.0
 	 * Licensed under the MIT License.
-	 * Copyright (C) 2010-present Uxmid Inc. All rights reserved.
+	 * Copyright (C) 2010-present UXmid Inc. All rights reserved.
 	 */
 	function __export(m) {
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
@@ -6709,7 +6709,7 @@
 	 * @Date:  2019-06-25 16:05:55
 	 * @version: 1.0.0
 	 * Licensed under the MIT License.
-	 * Copyright (C) 2010-present Uxmid Inc. All rights reserved.
+	 * Copyright (C) 2010-present UXmid Inc. All rights reserved.
 	 */
 	var __assign = (commonjsGlobal && commonjsGlobal.__assign) || function () {
 	    __assign = Object.assign || function(t) {

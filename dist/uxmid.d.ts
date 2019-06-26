@@ -2444,49 +2444,6 @@ declare class BroadcastContract {
 }
 
 /**
- * 表示一条广播信息。
- * @class
- * @version 1.0.0
- */
-declare class Broadcast$1 {
-    private _uri;
-    private _scheme;
-    private _action;
-    private _extras;
-    /**
-     * 获取广播的方案。
-     * @property
-     * @returns string
-     */
-    readonly scheme: string;
-    /**
-     * 获取广播的动作。
-     * @property
-     * @returns string
-     */
-    readonly action: string;
-    /**
-     * 获取广播的标识符。
-     * @property
-     * @returns string
-     */
-    readonly uri: string;
-    /**
-     * 获取广播携带的数据。
-     * @property
-     * @returns Map
-     */
-    readonly extras: Map<string, any>;
-    /**
-     * 初始化一个广播新实例。
-     * @property
-     * @param  {string} uri 广播描述符。
-     * @param  {Map<string, any>} extras? 携带的数据。
-     */
-    constructor(uri: string, extras?: Map<string, any>);
-}
-
-/**
  * 提供用于广播注册发布等功能。
  * @class
  * @version 1.0.0
@@ -2538,7 +2495,7 @@ declare class BroadcastManager {
      * @param  {Broadcast} broadcast 广播实例。
      * @returns void
      */
-    send(broadcast: Broadcast$1): void;
+    send(broadcast: Broadcast): void;
     /**
      * 当接收广播时调用。
      * @protected
@@ -2553,7 +2510,7 @@ declare class BroadcastManager {
      * @param  {Broadcast} broadcast
      * @returns BroadcastContext
      */
-    protected createBroadcastContext(broadcast: Broadcast$1): BroadcastContext;
+    protected createBroadcastContext(broadcast: Broadcast): BroadcastContext;
 }
 
 /**
@@ -2704,7 +2661,7 @@ declare class BroadcastReceiverProvider implements IBroadcastReceiverProvider {
      * @param  {Broadcast} broadcast 广播实例。
      * @returns IEnumerable<IBroadcastReceiver>
      */
-    resolve(broadcast: Broadcast$1): IEnumerable<IBroadcastReceiver>;
+    resolve(broadcast: Broadcast): IEnumerable<IBroadcastReceiver>;
 }
 
 /**
