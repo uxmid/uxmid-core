@@ -39,8 +39,6 @@ describe("EventProviderFactoryTest", () =>
         assert.isNotNull(provider1);
         assert.isNotNull(provider2);
 
-        console.log("-------------------EventArgs", EventArgs);
-
         provider1.addListener("something", (e: EventArgs) => { console.log(e); });
 
         assert.isTrue(provider1.hasListener("something"));

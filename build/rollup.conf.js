@@ -1,5 +1,5 @@
-import path from "path";
-import commonjs from 'rollup-plugin-commonjs';
+const path = require("path");
+const commonjs = require("rollup-plugin-commonjs");
 const version = process.env.VERSION || require("../package.json").version;
 
 const banner =
@@ -16,18 +16,21 @@ const banner =
  * Copyright (C) 2010-${new Date().getFullYear()} Uxmid Inc. All rights reserved. 
  */`;
 
-export default {
-    input: path.resolve(__dirname, "../dist/index.js"),
+module.exports = 
+{
+    input:
+    {
+        input: path.resolve(__dirname, "../bin/index.js"),
+        plugins:
+        [
+            commonjs()
+        ]
+    },
     output:
     {
         file: path.resolve(__dirname, "../dist/uxmid.js"),
         name: "uxmid",
-        format: 'umd',
-        banner,
-        // minify: true // 代码是否压缩
-    },
-    plugins:
-    [
-        commonjs()
-    ]
+        format: "umd",
+        banner
+    }
 };

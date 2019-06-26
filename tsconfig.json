@@ -12,7 +12,7 @@
     "compilerOptions": 
     {
         "strict": true,
-        "outDir": "./dist/",
+        "outDir": "./bin/",
         "target": "es5",
         "module": "commonjs",
         // "sourceMap": true,

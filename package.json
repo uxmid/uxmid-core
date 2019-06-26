@@ -6,19 +6,17 @@
         "lint": "tslint src/**/*.ts",
         "build:compile": "tsc -p .",
         "build:dist": "node build/dist.js",
-        "build": "npm run lint && npm run build:compile && npm run b",
-        "w": "node build/build.js",
-        "r": "rollup --config ./build/rollup.conf.js",
-        "b": "browserify --node --standalone ts-promise ./dist/index.js > ./dist/uxmid.js",
+        "build": "npm run lint && npm run build:compile && npm run build:dist && npm run mini",
         "mini": "uglifyjs ./dist/uxmid.js --compress --mangle --mangle-props --mangle-regex='/^_/' --reserved 'Promise' > ./dist/uxmid.min.js",
         "unit": "karma start test/unit/karma.conf.js",
         "test": "npm run unit"
     },
     "files": [
-        "dist"
+        "bin",
+        "types"
     ],
     "main": "dist/uxmid.js",
-    "typings": "dist/uxmid.d.ts",
+    "typings": "types/uxmid.d.ts",
     "keywords": [
         "uxmid",
         "typescript"
@@ -52,20 +50,20 @@
         "phantomjs-prebuilt": "^2.1.16",
         "rimraf": "^2.6.2",
         "rollup": "^1.16.2",
+        "rollup-plugin-dts": "^1.1.4",
         "rollup-plugin-replace": "^2.0.0",
+        "rollup-plugin-commonjs": "^10.0.0",
+        "rollup-plugin-typescript": "^1.0.1",
         "ts-loader": "^6.0.4",
         "tslint": "^5.18.0",
         "tslint-config-uxmid": "^1.0.0",
         "typescript": "^3.5.2",
-        "uglify-js": "^3.6.0"
+        "uglify-js": "^3.6.0",
+        "webpack": "^4.35.0",
+        "webpack-cli": "^3.3.5"
     },
     "engines": {
         "node": ">= 6.0.0",
         "npm": ">= 3.0.0"
-    },
-    "dependencies": {
-        "rollup-plugin-commonjs": "^10.0.0",
-        "webpack": "^4.35.0",
-        "webpack-cli": "^3.3.5"
     }
 }

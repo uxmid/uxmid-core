@@ -9,16 +9,10 @@
  * Copyright (C) 2010-present Uxmid Inc. All rights reserved. 
  */
 
-export * from "./application";
-export * from "./broadcast";
-export * from "./collections";
-export * from "./commands";
-export * from "./common";
-export * from "./diagnostics";
-export * from "./events";
-export * from "./exceptions";
-export * from "./io";
-export * from "./reflection";
-export * from "./runtime";
-export * from "./security";
-export * from "./services";
+export * from "./exports";
+
+import * as uxmid from "./exports";
+
+export default {
+    ...uxmid
+};
