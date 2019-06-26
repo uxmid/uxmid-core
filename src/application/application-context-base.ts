@@ -74,7 +74,7 @@ export default abstract class ApplicationContextBase
         return ServiceProviderFactory.instance;
     }
     
-    /** 吗 
+    /**
      * 获取当前应用程序的模块集合。
      * @property
      * @returns ISet
