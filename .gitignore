@@ -17,6 +17,5 @@
 .svn/
 node_modules/
 typings/
-dist/
 bin/
 coverage/
