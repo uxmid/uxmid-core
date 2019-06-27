@@ -61,7 +61,7 @@ export default interface ISet<T> extends IEnumerable<T>
     /**
      * 搜索指定的元素，并返回整个 ISet<T> 中第一个匹配项的从零开始的索引。
      * @param  {T} value 要在 ISet<T> 中定位的元素。对于引用类型，该值可以为 null。
-     * @param  {number} index? 从零开始的搜索的起始索引。
+     * @param  {number} index 从零开始的搜索的起始索引。
      * @returns number 如果在整个 ISet<T> 中找到 value 的第一个匹配项，则为该项的从零开始的索引；否则为 -1。
      */
     indexOf(value: T, index?: number): number;
@@ -82,7 +82,7 @@ export default interface ISet<T> extends IEnumerable<T>
     /**
      * 对 IEnumerable<T> 进行迭代处理。
      * @param  {(item:T,source:IEnumerable<T>)=>void} callback 每次迭代中执行的回掉函数，当前迭代项将传入该函数。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     forEach(callback: (item: T, source: IEnumerable<T>) => void, scope?: any): void;
@@ -90,7 +90,7 @@ export default interface ISet<T> extends IEnumerable<T>
     /**
      * 对 ISet<T> 进行迭代处理。
      * @param  {(value:T,index:number,set:ISet<T>)=>void} callback 每次迭代中执行的回掉函数，当前迭代项及它的索引号将被作为参数传入该函数。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     forEach(callback: (value: T, index: number, set: ISet<T>) => void, scope?: any): void;
@@ -98,14 +98,14 @@ export default interface ISet<T> extends IEnumerable<T>
     /**
      * 搜索与指定谓词所定义的条件相匹配的元素，并返回 ISet<T> 中第一个匹配元素。
      * @param  {(value:T,index:number,set:ISet<T>)=>boolean} callback 定义要搜索的元素的条件。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns T
      */
     find(callback: (value: T, index: number, set: ISet<T>) => boolean, scope?: any): T;
 
     /**
      * 使用指定的比较器对整个 ISet<T> 中的元素进行排序。
-     * @param  {(a:T,b:T)=>number} comparer? 比较元素时要使用的比较器函数。
+     * @param  {(a:T,b:T)=>number} comparer 比较元素时要使用的比较器函数。
      * @returns void
      */
     sort(comparer?: (a: T, b: T) => number): void;

@@ -62,7 +62,7 @@ export default class ServiceProviderFactory implements IServiceProviderFactory, 
     
     /**
      * 初始化服务提供程序工厂的新实例。
-     * @param  {string} defaultName? 默认提供程序名称。
+     * @param  {string} defaultName 默认提供程序名称。
      */
     protected constructor(defaultName: string = "")
     {
@@ -134,7 +134,7 @@ export default class ServiceProviderFactory implements IServiceProviderFactory, 
     /**
      * 对 IEnumerable<T> 进行迭代处理。
      * @param  {Function} callback 每次迭代中执行的回掉函数，当前迭代项将被作为参数传入该函数。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     public forEach(callback: (item: KeyValuePair<string, IServiceProvider>, source: IEnumerable<KeyValuePair<string, IServiceProvider>>) => void, scope?: any): void

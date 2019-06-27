@@ -71,7 +71,7 @@ export default interface IWorkbench extends IEventProvider
     /**
      * 打开工作台。
      * @async
-     * @param  {Array<string>} args
+     * @param args
      * @returns void
      */
     open(args: Array<string>): Promise<void>;

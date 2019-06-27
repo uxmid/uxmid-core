@@ -27,7 +27,7 @@ export default class Logger
      * @static
      * @param  {any} source 日志来源。
      * @param  {string} message 日志消息。
-     * @param  {any} data? 附带数据。
+     * @param  {any} data 附带数据。
      * @returns void
      */
     public static debug(source: any, message: string, data?: any): void
@@ -40,7 +40,7 @@ export default class Logger
      * @static
      * @param  {any} source 日志来源。
      * @param  {string} message 日志消息。
-     * @param  {any} data? 附带数据。
+     * @param  {any} data 附带数据。
      * @returns void
      */
     public static warn(source: any, message: string, data?: any): void
@@ -53,7 +53,7 @@ export default class Logger
      * @static
      * @param  {any} source 日志来源。
      * @param  {string} message 日志消息。
-     * @param  {any} data? 附带数据。
+     * @param  {any} data 附带数据。
      * @returns void
      */
     public static error(source: any, message: string, data?: any): void
@@ -67,7 +67,7 @@ export default class Logger
      * @param  {LogLevel} level 日志级别。
      * @param  {any} source 日志来源。
      * @param  {string} message 日志消息。
-     * @param  {any} data? 附带数据。
+     * @param  {any} data 附带数据。
      * @returns void
      */
     private static write(level: LogLevel, source: any, message: string , data?: any)

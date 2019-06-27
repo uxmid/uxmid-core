@@ -58,7 +58,7 @@ export default class Broadcast
      * 初始化一个广播新实例。
      * @property
      * @param  {string} uri 广播描述符。
-     * @param  {Map<string, any>} extras? 携带的数据。
+     * @param  {Map<string, any>} extras 携带的数据。
      */
     public constructor(uri: string, extras?: Map<string, any>)
     {

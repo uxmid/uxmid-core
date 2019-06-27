@@ -34,7 +34,7 @@ export default class WorkerStateChangedEventArgs extends EventArgs
      * @param {string} type 事件类型。
      * @param  {string} actionName 操作名称。
      * @param  {WorkerState} state 发生改变的状态。
-     * @param  {Error} error? 发生状态改变时产生的异常。
+     * @param  {Error} error 发生状态改变时产生的异常。
      */
     public constructor(type: string, actionName: string, state: WorkerState, error?: Error)
     {

@@ -109,27 +109,27 @@ export default class ServiceEntry
     /**
      * 初始化一个服务项的新实例。
      * @param  {Function} serviceType 服务类型。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      */
     public constructor(serviceType: Function, contractTypes?: Array<Function>);
     /**
      * 初始化一个服务项的新实例。
      * @param  {any} service 服务实例。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      */
     public constructor(service: any, contractTypes?: Array<Function>);
     /**
      * 初始化一个服务项的新实例。
      * @param  {string} name 服务名称。
      * @param  {Function} serviceType 服务类型。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      */
     public constructor(name: string, serviceType: Function, contractTypes?: Array<Function>);
     /**
      * 初始化一个服务项的新实例。
      * @param  {string} name 服务名称。
      * @param  {any} service 服务实例。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      */
     public constructor(name: string, service: any, contractTypes?: Array<Function>);
     public constructor()

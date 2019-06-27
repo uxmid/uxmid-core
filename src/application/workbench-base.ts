@@ -183,7 +183,7 @@ export default abstract class WorkbenchBase extends EventProvider implements IWo
     /**
      * 关闭工作台。
      * @async
-     * @returns boolean
+     * @returns Promise<boolean>
      */
     public async close(): Promise<boolean>
     {

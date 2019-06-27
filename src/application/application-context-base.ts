@@ -142,7 +142,7 @@ export default abstract class ApplicationContextBase
     /**
      * 初始化应用程序上下文的新实例。
      * @protected
-     * @param  {string} applicationId? 应用程序的唯一代号。
+     * @param applicationId 应用程序的唯一代号。
      */
     protected constructor(applicationId?: string)
     {
@@ -154,7 +154,7 @@ export default abstract class ApplicationContextBase
     
     /**
      * 返回当前应用程序的工作台(主界面)。
-     * @param  {Array<string>} args 初始化的参数。
+     * @param args 初始化的参数。
      * @returns IWorkbench 返回新建或已创建的工作台对象。
      */
     public getWorkbench(args: Array<string>): IWorkbench

@@ -9,8 +9,8 @@ const receivers = new Map<Function, IBroadcastReceiver>();
 
 /**
  * 标注当前类型是一个广播接收器。
- * @param  {string} uri 广播描述符。
- * @param  {number} priority? 广播优先级。
+ * @param uri 广播描述符。
+ * @param priority 广播优先级。
  */
 export default function receivable(uri: string, priority?: number)
 {
@@ -19,7 +19,7 @@ export default function receivable(uri: string, priority?: number)
         throw new InvalidOperationException("The broadcast uri is empty.");
     }
 
-    return function(receiverType: Function)
+    return function(receiverType: Function): void
     {
         let receiver = receivers.get(receiverType),
             contract = new BroadcastContract(uri);

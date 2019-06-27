@@ -40,8 +40,8 @@ export default class ServiceProvider implements IServiceProvider
 
     /**
      * 初始化服务提供程序的新实例。
-     * @param  {IServiceStorage} storage? 服务仓储实例。
-     * @param  {IServiceBuilder} builder? 服务生成器实例。
+     * @param  {IServiceStorage} storage 服务仓储实例。
+     * @param  {IServiceBuilder} builder 服务生成器实例。
      */
     public constructor(storage?: IServiceStorage, builder?: IServiceBuilder)
     {
@@ -63,7 +63,7 @@ export default class ServiceProvider implements IServiceProvider
      * 注册一个服务至服务容器中。
      * @param  {string} name 服务名称。
      * @param  {Function} serviceType 服务类型。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns void
      */
     public register(name: string, serviceType: Function, contractTypes?: Array<Function>): void;
@@ -78,21 +78,21 @@ export default class ServiceProvider implements IServiceProvider
      * 注册一个服务至服务容器中。
      * @param  {string} name 服务名称。
      * @param  {any} service 服务实例。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns void
      */
     public register(name: string, service: any, contractTypes?: Array<Function>): void;
     /**
      * 注册一个服务至服务容器中。
      * @param  {Function} serviceType 服务类型。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns void
      */
     public register(serviceType: Function, contractTypes?: Array<Function>): void;
     /**
      * 注册一个服务至服务容器中。
      * @param  {any} service 服务实例。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns void
      */
     public register(service: any, contractTypes?: Array<Function>): void;

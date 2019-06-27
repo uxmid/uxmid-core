@@ -73,7 +73,7 @@ export default class EventProvider implements IEventProvider
     
     /**
      * 初始化事件提供程序的新实例。
-     * @param  {any} source? 事件源实例。
+     * @param  {any} source 事件源实例。
      */
     public constructor(source?: any)
     {
@@ -90,8 +90,8 @@ export default class EventProvider implements IEventProvider
      * 由于垃圾回收器不会删除仍包含引用的对象，因此不会从内存中自动删除使用已注册事件侦听器的对象。
      * @param  {string} type 事件类型。
      * @param  {Function} 处理事件的侦听器函数。
-     * @param  {any} scope? 侦听函数绑定的 this 对象。
-     * @param  {boolean} once? 是否添加仅回调一次的事件侦听器，如果此参数设为 true 则在第一次回调时就自动移除监听。
+     * @param  {any} scope 侦听函数绑定的 this 对象。
+     * @param  {boolean} once 是否添加仅回调一次的事件侦听器，如果此参数设为 true 则在第一次回调时就自动移除监听。
      * @returns void
      */
     public addListener(type: string, listener: Function, scope: any = this, once: boolean = false): void
@@ -123,10 +123,7 @@ export default class EventProvider implements IEventProvider
     }
     
     /**
-     * 移除侦听器。如果没有注册任何匹配的侦听器，则对此方法的调用没有任何效果。
-     * @param  {string} type 事件类型。
-     * @param  {Function} listener 处理事件的侦听器函数。
-     * @param  {any} scope? 侦听函数绑定的 this 对象。
+     * 移除侦听器。如果没有注册任何匹配的侦听器，则对此方法的调用没有任何效果。 侦听函数绑定的 this 对象。
      * @returns void
      */
     public removeListener(type: string, listener: Function, scope: any = this): void
@@ -177,7 +174,7 @@ export default class EventProvider implements IEventProvider
     /**
      * 派发一个指定类型的事件。
      * @param  {string} type 事件类型。
-     * @param  {any} data? 事件数据。
+     * @param  {any} data 事件数据。
      * @returns void
      */
     public dispatchEvent(type: string, data?: any): void;

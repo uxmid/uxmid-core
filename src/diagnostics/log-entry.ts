@@ -68,7 +68,7 @@ export default class LogEntry
      * @param  {LogLevel} level 日志级别。
      * @param  {any} source 日志来源。
      * @param  {string} message 消息。
-     * @param  {any} data? 附带数据。
+     * @param  {any} data 附带数据。
      */
     public constructor(level: LogLevel, source: any, message: string , data?: any)
     {

@@ -58,7 +58,7 @@ export default class BroadcastManager
     
     /**
      * 初始化广播管理器的新实例。
-     * @param  {IBroadcastReceiverProvider} receiverProvider? 广播接收器提供程序。
+     * @param  {IBroadcastReceiverProvider} receiverProvider 广播接收器提供程序。
      */
     protected constructor(receiverProvider?: IBroadcastReceiverProvider)
     {
