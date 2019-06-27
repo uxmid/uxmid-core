@@ -25,7 +25,7 @@ export default class Set<T> implements ISet<T>
     
     /**
      * 初始化 Set<T> 的新实例。
-     * @param  {Array<T>} ...values
+     * @param values 初始化参数
      */
     public constructor(...values: Array<T>)
     {
@@ -34,7 +34,7 @@ export default class Set<T> implements ISet<T>
     
     /**
      * 将元素添加到 Set<T> 的结尾处。
-     * @param  {T[]} ...values 要添加到 Set<T> 末尾处的元素。
+     * @param values 要添加到 Set<T> 末尾处的元素。
      * @returns Set
      */
     public add(...values: Array<T>): Set<T>

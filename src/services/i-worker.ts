@@ -41,7 +41,7 @@ export default interface IWorker extends IEventProvider
     /**
      * 启动工作器。
      * @async
-     * @param  {Array<string>} ...args 启动的参数。
+     * @param args 启动的参数。
      * @returns void
      */
     start(...args: Array<string>): Promise<void>;
@@ -49,7 +49,7 @@ export default interface IWorker extends IEventProvider
     /**
      * 停止工作器。
      * @async
-     * @param  {Array<string>} ...args 停止的参数。
+     * @param args 停止的参数。
      * @returns void
      */
     stop(...args: Array<string>): Promise<void>;

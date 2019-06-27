@@ -124,6 +124,9 @@ export default class EventProvider implements IEventProvider
     
     /**
      * 移除侦听器。如果没有注册任何匹配的侦听器，则对此方法的调用没有任何效果。 侦听函数绑定的 this 对象。
+     * @param type 事件类型。
+     * @param listener 处理事件的侦听器函数。
+     * @param scope 侦听函数绑定的 this 对象。
      * @returns void
      */
     public removeListener(type: string, listener: Function, scope: any = this): void

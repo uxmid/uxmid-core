@@ -102,11 +102,11 @@ export default class CommandExpression
     
     /**
      * 初始化命令表达式的新实例。
-     * @param  {PathAnchor} anchor 锚定点。
-     * @param  {string} name 命令名称。
-     * @param  {string} path 命令路径。
-     * @param  {Map} options 命令选项。
-     * @param  {string[]} ...args 命令参数。
+     * @param anchor 锚定点。
+     * @param name 命令名称。
+     * @param path 命令路径。
+     * @param options 命令选项。
+     * @param args 命令参数。
      */
     public constructor(anchor: PathAnchor, name: string, path: string, options: Map<string, string>, ...args: Array<string>)
     {

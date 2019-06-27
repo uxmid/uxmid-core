@@ -21,8 +21,8 @@ export default class Activator
 
     /**
      * 创建指定类型的实例。
-     * @param  {string|Function} type 类型字符串或类型构造函数。
-     * @param  {any[]} ...params 需要传递给构造函数的参数。
+     * @param type 类型字符串或类型构造函数。
+     * @param params 需要传递给构造函数的参数。
      * @returns T
      */
     public static createInstance<T>(type: string | Function, ...params: Array<any>): T

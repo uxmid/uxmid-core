@@ -109,7 +109,7 @@ export default abstract class WorkerBase extends EventProvider implements IWorke
     /**
      * 启动工作器。
      * @async
-     * @param  {Array<string>} ...args 启动的参数。
+     * @param args 启动的参数。
      * @returns void
      */
     public async start(...args: Array<string>): Promise<void>
@@ -147,7 +147,7 @@ export default abstract class WorkerBase extends EventProvider implements IWorke
     /**
      * 停止工作器。
      * @async
-     * @param  {Array<string>} ...args 停止的参数。
+     * @param args 停止的参数。
      * @returns void
      */
     public async stop(...args: Array<string>): Promise<void>
@@ -283,7 +283,7 @@ export default abstract class WorkerBase extends EventProvider implements IWorke
      * @protected
      * @abstract
      * @async
-     * @param  {Array<string>} ...args
+     * @param args
      * @returns void
      */
     protected abstract async onStart(...args: Array<string>): Promise<void>;
@@ -293,7 +293,7 @@ export default abstract class WorkerBase extends EventProvider implements IWorke
      * @protected
      * @abstract
      * @async
-     * @param  {Array<string>} ...args
+     * @param args
      * @returns void
      */
     protected abstract async onStop(...args: Array<string>): Promise<void>;

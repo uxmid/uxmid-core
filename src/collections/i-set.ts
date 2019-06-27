@@ -18,7 +18,7 @@ export default interface ISet<T> extends IEnumerable<T>
 
     /**
      * 将元素添加到 ISet<T> 的结尾处。
-     * @param  {Array<T>} ...values 要添加到 ISet<T> 末尾处的元素。
+     * @param values 要添加到 ISet<T> 末尾处的元素。
      * @returns Set
      */
     add(...values: Array<T>): ISet<T>;
