@@ -9,6 +9,6 @@ export default class ArgumentException extends Exception
 {
     public constructor(message?: string)
     {
-        super(message);
+        super("ArgumentException", message);
     }
 }

@@ -90,7 +90,7 @@ interface IEnumerable<T> {
     /**
      * 对 IEnumerable<T> 进行迭代处理。
      * @param  {Function} callback 每次迭代中执行的回掉函数，当前迭代项将传入该函数。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     forEach(callback: (item: T, source: IEnumerable<T>) => void, scope?: any): void;
@@ -163,7 +163,7 @@ interface IMap<K, V> extends IEnumerable<KeyValuePair<K, V>> {
     /**
      * 对 IEnumerable<T> 进行迭代处理。
      * @param  {Function} callback 每次迭代中执行的回掉函数，当前迭代项将传入该函数。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     forEach(callback: (item: KeyValuePair<K, V>, source: IEnumerable<KeyValuePair<K, V>>) => void, scope?: any): void;
@@ -223,7 +223,7 @@ declare class Map<K, V> implements IMap<K, V> {
     /**
      * 对 IEnumerable<T> 进行迭代处理。
      * @param  {Function} callback 每次迭代中执行的回掉函数，当前迭代项将传入该函数。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     forEach(callback: (item: KeyValuePair<K, V>, source: IEnumerable<KeyValuePair<K, V>>) => void, scope?: any): void;
@@ -265,7 +265,7 @@ interface ISet<T> extends IEnumerable<T> {
     size: number;
     /**
      * 将元素添加到 ISet<T> 的结尾处。
-     * @param  {Array<T>} ...values 要添加到 ISet<T> 末尾处的元素。
+     * @param values 要添加到 ISet<T> 末尾处的元素。
      * @returns Set
      */
     add(...values: Array<T>): ISet<T>;
@@ -302,7 +302,7 @@ interface ISet<T> extends IEnumerable<T> {
     /**
      * 搜索指定的元素，并返回整个 ISet<T> 中第一个匹配项的从零开始的索引。
      * @param  {T} value 要在 ISet<T> 中定位的元素。对于引用类型，该值可以为 null。
-     * @param  {number} index? 从零开始的搜索的起始索引。
+     * @param  {number} index 从零开始的搜索的起始索引。
      * @returns number 如果在整个 ISet<T> 中找到 value 的第一个匹配项，则为该项的从零开始的索引；否则为 -1。
      */
     indexOf(value: T, index?: number): number;
@@ -320,27 +320,27 @@ interface ISet<T> extends IEnumerable<T> {
     /**
      * 对 IEnumerable<T> 进行迭代处理。
      * @param  {(item:T,source:IEnumerable<T>)=>void} callback 每次迭代中执行的回掉函数，当前迭代项将传入该函数。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     forEach(callback: (item: T, source: IEnumerable<T>) => void, scope?: any): void;
     /**
      * 对 ISet<T> 进行迭代处理。
      * @param  {(value:T,index:number,set:ISet<T>)=>void} callback 每次迭代中执行的回掉函数，当前迭代项及它的索引号将被作为参数传入该函数。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     forEach(callback: (value: T, index: number, set: ISet<T>) => void, scope?: any): void;
     /**
      * 搜索与指定谓词所定义的条件相匹配的元素，并返回 ISet<T> 中第一个匹配元素。
      * @param  {(value:T,index:number,set:ISet<T>)=>boolean} callback 定义要搜索的元素的条件。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns T
      */
     find(callback: (value: T, index: number, set: ISet<T>) => boolean, scope?: any): T;
     /**
      * 使用指定的比较器对整个 ISet<T> 中的元素进行排序。
-     * @param  {(a:T,b:T)=>number} comparer? 比较元素时要使用的比较器函数。
+     * @param  {(a:T,b:T)=>number} comparer 比较元素时要使用的比较器函数。
      * @returns void
      */
     sort(comparer?: (a: T, b: T) => number): void;
@@ -373,12 +373,12 @@ declare class Set<T> implements ISet<T> {
     readonly size: number;
     /**
      * 初始化 Set<T> 的新实例。
-     * @param  {Array<T>} ...values
+     * @param values 初始化参数
      */
     constructor(...values: Array<T>);
     /**
      * 将元素添加到 Set<T> 的结尾处。
-     * @param  {T[]} ...values 要添加到 Set<T> 末尾处的元素。
+     * @param values 要添加到 Set<T> 末尾处的元素。
      * @returns Set
      */
     add(...values: Array<T>): Set<T>;
@@ -415,7 +415,7 @@ declare class Set<T> implements ISet<T> {
     /**
      * 搜索指定的元素，并返回整个 Set<T> 中第一个匹配项的从零开始的索引。
      * @param  {T} value 要在 Set<T> 中定位的元素。对于引用类型，该值可以为 null。
-     * @param  {number} index? 从零开始的搜索的起始索引。
+     * @param  {number} index 从零开始的搜索的起始索引。
      * @returns number 如果在整个 Set<T> 中找到 value 的第一个匹配项，则为该项的从零开始的索引；否则为 -1。
      */
     indexOf(value: T, index?: number): number;
@@ -433,27 +433,27 @@ declare class Set<T> implements ISet<T> {
     /**
      * 对 Set<T> 进行迭代处理。
      * @param  {(item:T,index:number,set:Set<T>)=>void} callback 每次迭代中执行的回掉函数，当前迭代项及它的索引号将被作为参数传入该函数。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     forEach(callback: (item: T, index: number, set: Set<T>) => void, scope?: any): void;
     /**
      * 对 IEnumerable<T> 进行迭代处理。
      * @param  {(value:T,source:IEnumerable<T>)=>void} callback 每次迭代中执行的回掉函数，当前迭代项将传入该函数。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     forEach(callback: (value: T, source: IEnumerable<T>) => void, scope?: any): void;
     /**
      * 搜索与指定谓词所定义的条件相匹配的元素，并返回 Set<T> 中第一个匹配元素。
      * @param  {Function} callback 定义要搜索的元素的条件。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns T
      */
     find(callback: (value: T, index: number, set: Set<T>) => boolean, scope?: any): T;
     /**
      * 使用指定的比较器对整个 Set<T> 中的元素进行排序。
-     * @param  {Function} comparer? 比较元素时要使用的比较器函数。
+     * @param  {Function} comparer 比较元素时要使用的比较器函数。
      * @returns void
      */
     sort(comparer?: (a: T, b: T) => number): void;
@@ -505,7 +505,7 @@ interface ICredential {
 /**
  * 标注当前类型是一个可注入的服务。
  * @summary 如果未指定 providerName 参数则默认注入至默认服务容器中。
- * @param  {string} providerName? 服务容器名称。
+ * @param providerName 服务容器名称。
  */
 declare function injectable(providerName?: string): (serviceType: Function) => void;
 
@@ -579,27 +579,27 @@ declare class ServiceEntry {
     /**
      * 初始化一个服务项的新实例。
      * @param  {Function} serviceType 服务类型。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      */
     constructor(serviceType: Function, contractTypes?: Array<Function>);
     /**
      * 初始化一个服务项的新实例。
      * @param  {any} service 服务实例。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      */
     constructor(service: any, contractTypes?: Array<Function>);
     /**
      * 初始化一个服务项的新实例。
      * @param  {string} name 服务名称。
      * @param  {Function} serviceType 服务类型。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      */
     constructor(name: string, serviceType: Function, contractTypes?: Array<Function>);
     /**
      * 初始化一个服务项的新实例。
      * @param  {string} name 服务名称。
      * @param  {any} service 服务实例。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      */
     constructor(name: string, service: any, contractTypes?: Array<Function>);
     /**
@@ -682,7 +682,7 @@ interface IServiceProvider {
      * 注册一个服务至服务容器中。
      * @param  {string} name 服务名称。
      * @param  {Function} serviceType 服务类型。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns void
      */
     register(name: string, serviceType: Function, contractTypes?: Array<Function>): void;
@@ -697,21 +697,21 @@ interface IServiceProvider {
      * 注册一个服务至服务容器中。
      * @param  {string} name 服务名称。
      * @param  {any} service 服务实例。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns void
      */
     register(name: string, service: any, contractTypes?: Array<Function>): void;
     /**
      * 注册一个服务至服务容器中。
      * @param  {Function} serviceType 服务类型。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns void
      */
     register(serviceType: Function, contractTypes?: Array<Function>): void;
     /**
      * 注册一个服务至服务容器中。
      * @param  {any} service 服务实例。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns void
      */
     register(service: any, contractTypes?: Array<Function>): void;
@@ -763,8 +763,8 @@ declare class ServiceProvider implements IServiceProvider {
     readonly builder: IServiceBuilder;
     /**
      * 初始化服务提供程序的新实例。
-     * @param  {IServiceStorage} storage? 服务仓储实例。
-     * @param  {IServiceBuilder} builder? 服务生成器实例。
+     * @param  {IServiceStorage} storage 服务仓储实例。
+     * @param  {IServiceBuilder} builder 服务生成器实例。
      */
     constructor(storage?: IServiceStorage, builder?: IServiceBuilder);
     /**
@@ -778,7 +778,7 @@ declare class ServiceProvider implements IServiceProvider {
      * 注册一个服务至服务容器中。
      * @param  {string} name 服务名称。
      * @param  {Function} serviceType 服务类型。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns void
      */
     register(name: string, serviceType: Function, contractTypes?: Array<Function>): void;
@@ -793,21 +793,21 @@ declare class ServiceProvider implements IServiceProvider {
      * 注册一个服务至服务容器中。
      * @param  {string} name 服务名称。
      * @param  {any} service 服务实例。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns void
      */
     register(name: string, service: any, contractTypes?: Array<Function>): void;
     /**
      * 注册一个服务至服务容器中。
      * @param  {Function} serviceType 服务类型。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns void
      */
     register(serviceType: Function, contractTypes?: Array<Function>): void;
     /**
      * 注册一个服务至服务容器中。
      * @param  {any} service 服务实例。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns void
      */
     register(service: any, contractTypes?: Array<Function>): void;
@@ -887,7 +887,7 @@ declare class ServiceProviderFactory implements IServiceProviderFactory, IEnumer
     default: IServiceProvider;
     /**
      * 初始化服务提供程序工厂的新实例。
-     * @param  {string} defaultName? 默认提供程序名称。
+     * @param  {string} defaultName 默认提供程序名称。
      */
     protected constructor(defaultName?: string);
     /**
@@ -916,7 +916,7 @@ declare class ServiceProviderFactory implements IServiceProviderFactory, IEnumer
     /**
      * 对 IEnumerable<T> 进行迭代处理。
      * @param  {Function} callback 每次迭代中执行的回掉函数，当前迭代项将被作为参数传入该函数。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     forEach(callback: (item: KeyValuePair<string, IServiceProvider>, source: IEnumerable<KeyValuePair<string, IServiceProvider>>) => void, scope?: any): void;
@@ -968,14 +968,14 @@ declare abstract class ServiceStorageBase implements IServiceStorage {
     /**
      * 添加一个服务项至仓储中。
      * @param  {Function} serviceType 服务类型。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns ServiceEntry
      */
     add(serviceType: Function, contractTypes?: Array<Function>): ServiceEntry;
     /**
      * 添加一个服务项至仓储中。
      * @param  {any} service 服务实例。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns ServiceEntry
      */
     add(service: any, contractTypes?: Array<Function>): ServiceEntry;
@@ -997,7 +997,7 @@ declare abstract class ServiceStorageBase implements IServiceStorage {
      * 添加一个服务项至仓储中。
      * @param  {string} name 服务名称。
      * @param  {Function} serviceType 服务类型。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns ServiceEntry
      */
     add(name: string, serviceType: Function, contractTypes?: Array<Function>): ServiceEntry;
@@ -1005,7 +1005,7 @@ declare abstract class ServiceStorageBase implements IServiceStorage {
      * 添加一个服务项至仓储中。
      * @param  {string} name 服务名称。
      * @param  {any} service 服务实例。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns ServiceEntry
      */
     add(name: string, service: any, contractTypes?: Array<Function>): ServiceEntry;
@@ -1047,7 +1047,7 @@ declare abstract class ServiceStorageBase implements IServiceStorage {
     /**
      * 对 IEnumerable<T> 进行迭代处理。
      * @param  {(item:T,source:IEnumerable<T>)=>void} callback 每次迭代中执行的回掉函数，当前迭代项将传入该函数。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     abstract forEach(callback: (item: ServiceEntry, source: IEnumerable<ServiceEntry>) => void, scope?: any): void;
@@ -1135,7 +1135,7 @@ declare class ServiceStorage extends ServiceStorageBase {
      * 对当前仓储进行迭代处理。
      * @override
      * @param  {Function} callback 每次迭代中执行的回掉函数，当前迭代项及它的索引号将被作为参数传入该方法。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     forEach(callback: (value: ServiceEntry, source: IEnumerable<ServiceEntry>) => void, scope?: any): void;
@@ -1179,7 +1179,7 @@ declare class EventArgs {
      * 初始化 EventArgs 类的新实例。
      * @constructor
      * @param  {string} type 事件类型。
-     * @param  {any?} data 可选数据。
+     * @param  {any} data 可选数据。
      */
     constructor(type: string, data?: any);
 }
@@ -1211,8 +1211,8 @@ interface IEventProvider {
      * 由于垃圾回收器不会删除仍包含引用的对象，因此不会从内存中自动删除使用已注册事件侦听器的对象。
      * @param  {string} type 事件类型。
      * @param  {Function} 处理事件的侦听器函数。
-     * @param  {any} scope? 侦听函数绑定的 this 对象。
-     * @param  {boolean} once? 是否添加仅回调一次的事件侦听器，如果此参数设为 true 则在第一次回调时就自动移除监听。
+     * @param  {any} scope 侦听函数绑定的 this 对象。
+     * @param  {boolean} once 是否添加仅回调一次的事件侦听器，如果此参数设为 true 则在第一次回调时就自动移除监听。
      * @returns void
      */
     addListener(type: string, listener: Function, scope?: any, once?: boolean): void;
@@ -1220,7 +1220,7 @@ interface IEventProvider {
      * 移除侦听器。如果没有注册任何匹配的侦听器，则对此方法的调用没有任何效果。
      * @param  {string} type 事件类型。
      * @param  {Function} listener 处理事件的侦听器函数。
-     * @param  {any} scope? 侦听函数绑定的 this 对象。
+     * @param  {any} scope 侦听函数绑定的 this 对象。
      * @returns void
      */
     removeListener(type: string, listener: Function, scope?: any): void;
@@ -1233,7 +1233,7 @@ interface IEventProvider {
     /**
      * 派发一个指定类型的事件。
      * @param  {string} type 事件类型。
-     * @param  {any} data? 事件数据。
+     * @param  {any} data 事件数据。
      * @returns void
      */
     dispatchEvent(type: string, data?: any): void;
@@ -1256,7 +1256,7 @@ declare class EventProvider implements IEventProvider {
     private _events;
     /**
      * 初始化事件提供程序的新实例。
-     * @param  {any} source? 事件源实例。
+     * @param  {any} source 事件源实例。
      */
     constructor(source?: any);
     /**
@@ -1265,16 +1265,16 @@ declare class EventProvider implements IEventProvider {
      * 由于垃圾回收器不会删除仍包含引用的对象，因此不会从内存中自动删除使用已注册事件侦听器的对象。
      * @param  {string} type 事件类型。
      * @param  {Function} 处理事件的侦听器函数。
-     * @param  {any} scope? 侦听函数绑定的 this 对象。
-     * @param  {boolean} once? 是否添加仅回调一次的事件侦听器，如果此参数设为 true 则在第一次回调时就自动移除监听。
+     * @param  {any} scope 侦听函数绑定的 this 对象。
+     * @param  {boolean} once 是否添加仅回调一次的事件侦听器，如果此参数设为 true 则在第一次回调时就自动移除监听。
      * @returns void
      */
     addListener(type: string, listener: Function, scope?: any, once?: boolean): void;
     /**
-     * 移除侦听器。如果没有注册任何匹配的侦听器，则对此方法的调用没有任何效果。
-     * @param  {string} type 事件类型。
-     * @param  {Function} listener 处理事件的侦听器函数。
-     * @param  {any} scope? 侦听函数绑定的 this 对象。
+     * 移除侦听器。如果没有注册任何匹配的侦听器，则对此方法的调用没有任何效果。 侦听函数绑定的 this 对象。
+     * @param type 事件类型。
+     * @param listener 处理事件的侦听器函数。
+     * @param scope 侦听函数绑定的 this 对象。
      * @returns void
      */
     removeListener(type: string, listener: Function, scope?: any): void;
@@ -1287,7 +1287,7 @@ declare class EventProvider implements IEventProvider {
     /**
      * 派发一个指定类型的事件。
      * @param  {string} type 事件类型。
-     * @param  {any} data? 事件数据。
+     * @param  {any} data 事件数据。
      * @returns void
      */
     dispatchEvent(type: string, data?: any): void;
@@ -1431,14 +1431,14 @@ interface IWorker extends IEventProvider {
     /**
      * 启动工作器。
      * @async
-     * @param  {Array<string>} ...args 启动的参数。
+     * @param args 启动的参数。
      * @returns void
      */
     start(...args: Array<string>): Promise<void>;
     /**
      * 停止工作器。
      * @async
-     * @param  {Array<string>} ...args 停止的参数。
+     * @param args 停止的参数。
      * @returns void
      */
     stop(...args: Array<string>): Promise<void>;
@@ -1485,7 +1485,7 @@ declare class WorkerStateChangedEventArgs extends EventArgs {
      * @param {string} type 事件类型。
      * @param  {string} actionName 操作名称。
      * @param  {WorkerState} state 发生改变的状态。
-     * @param  {Error} error? 发生状态改变时产生的异常。
+     * @param  {Error} error 发生状态改变时产生的异常。
      */
     constructor(type: string, actionName: string, state: WorkerState, error?: Error);
 }
@@ -1542,14 +1542,14 @@ declare abstract class WorkerBase extends EventProvider implements IWorker {
     /**
      * 启动工作器。
      * @async
-     * @param  {Array<string>} ...args 启动的参数。
+     * @param args 启动的参数。
      * @returns void
      */
     start(...args: Array<string>): Promise<void>;
     /**
      * 停止工作器。
      * @async
-     * @param  {Array<string>} ...args 停止的参数。
+     * @param args 停止的参数。
      * @returns void
      */
     stop(...args: Array<string>): Promise<void>;
@@ -1570,7 +1570,7 @@ declare abstract class WorkerBase extends EventProvider implements IWorker {
      * @protected
      * @abstract
      * @async
-     * @param  {Array<string>} ...args
+     * @param args
      * @returns void
      */
     protected abstract onStart(...args: Array<string>): Promise<void>;
@@ -1579,7 +1579,7 @@ declare abstract class WorkerBase extends EventProvider implements IWorker {
      * @protected
      * @abstract
      * @async
-     * @param  {Array<string>} ...args
+     * @param args
      * @returns void
      */
     protected abstract onStop(...args: Array<string>): Promise<void>;
@@ -1794,7 +1794,7 @@ interface IApplicationModule extends IDisposable {
     /**
      * 初始化应用扩展模块，并使其为处理请求做好准备。
      * 使用该方法将事件处理方法向具体事件进行注册等初始化操作。
-     * @param  {ApplicationContextBase} context 一个上下文对象，它提供对模块处理应用程序内所有应用程序对象的公用的方法、属性和事件的访问。
+     * @param context 一个上下文对象，它提供对模块处理应用程序内所有应用程序对象的公用的方法、属性和事件的访问。
      * @returns void
      */
     initialize(context: ApplicationContextBase): void;
@@ -1902,7 +1902,7 @@ interface IWorkbench extends IEventProvider {
     /**
      * 打开工作台。
      * @async
-     * @param  {Array<string>} args
+     * @param args
      * @returns void
      */
     open(args: Array<string>): Promise<void>;
@@ -1955,7 +1955,7 @@ declare abstract class ApplicationContextBase {
      * @returns IServiceProviderFactory
      */
     readonly serviceFactory: IServiceProviderFactory;
-    /** 吗
+    /**
      * 获取当前应用程序的模块集合。
      * @property
      * @returns ISet
@@ -1983,12 +1983,12 @@ declare abstract class ApplicationContextBase {
     /**
      * 初始化应用程序上下文的新实例。
      * @protected
-     * @param  {string} applicationId? 应用程序的唯一代号。
+     * @param applicationId 应用程序的唯一代号。
      */
     protected constructor(applicationId?: string);
     /**
      * 返回当前应用程序的工作台(主界面)。
-     * @param  {Array<string>} args 初始化的参数。
+     * @param args 初始化的参数。
      * @returns IWorkbench 返回新建或已创建的工作台对象。
      */
     getWorkbench(args: Array<string>): IWorkbench;
@@ -2066,40 +2066,38 @@ declare class Application {
      * 为指定的事件类型注册一个侦听器，以使侦听器能够接收事件通知。
      * @summary 如果不再需要某个事件侦听器，可调用 removeListener() 删除它，否则会产生内存问题。
      * 由于垃圾回收器不会删除仍包含引用的对象，因此不会从内存中自动删除使用已注册事件侦听器的对象。
-     * @param  {string} type 事件类型。
-     * @param  {Function} 处理事件的侦听器函数。
-     * @param  {any} scope? 侦听函数绑定的 this 对象。
-     * @param  {boolean} once? 是否添加仅回调一次的事件侦听器，如果此参数设为 true 则在第一次回调时就自动移除监听。
+     * @param type 事件类型。
+     * @param listener 处理事件的侦听器函数。
+     * @param scope 侦听函数绑定的 this 对象。
+     * @param once 是否添加仅回调一次的事件侦听器，如果此参数设为 true 则在第一次回调时就自动移除监听。
      * @returns void
      */
     static addListener(type: string, listener: Function, scope?: any, once?: boolean): void;
     /**
      * 移除侦听器。如果没有注册任何匹配的侦听器，则对此方法的调用没有任何效果。
-     * @param  {string} type 事件类型。
-     * @param  {Function} listener 处理事件的侦听器函数。
-     * @param  {any} scope? 侦听函数绑定的 this 对象。
+     * @param type 事件类型。
+     * @param listener 处理事件的侦听器函数。
+     * @param scope 侦听函数绑定的 this 对象。
      * @returns void
      */
     static removeListener(type: string, listener: Function, scope?: any): void;
     /**
      * 派发一个指定参数的事件。
-     * @param  {EventArgs} eventArgs 事件参数实例。
+     * @param eventArgs 事件参数实例。
      * @returns void
      */
     static dispatchEvent(args: EventArgs): void;
     /**
      * 初始化全局模块。
      * @private
-     * @static
-     * @param  {ApplicationContextBase} context
+     * @param context 应用上下文
      * @returns void
      */
     private static initializeGlobalModules;
     /**
      * 卸载全局模块。
      * @private
-     * @static
-     * @param  {ApplicationContextBase} context
+     * @param context 应用上下文
      * @returns void
      */
     private static disposeGlobalModules;
@@ -2208,7 +2206,7 @@ declare abstract class WorkbenchBase extends EventProvider implements IWorkbench
     /**
      * 关闭工作台。
      * @async
-     * @returns boolean
+     * @returns Promise<boolean>
      */
     close(): Promise<boolean>;
     /**
@@ -2355,7 +2353,7 @@ declare class Broadcast {
      * 初始化一个广播新实例。
      * @property
      * @param  {string} uri 广播描述符。
-     * @param  {Map<string, any>} extras? 携带的数据。
+     * @param  {Map<string, any>} extras 携带的数据。
      */
     constructor(uri: string, extras?: Map<string, any>);
 }
@@ -2474,7 +2472,7 @@ declare class BroadcastManager {
     static readonly instance: BroadcastManager;
     /**
      * 初始化广播管理器的新实例。
-     * @param  {IBroadcastReceiverProvider} receiverProvider? 广播接收器提供程序。
+     * @param  {IBroadcastReceiverProvider} receiverProvider 广播接收器提供程序。
      */
     protected constructor(receiverProvider?: IBroadcastReceiverProvider);
     /**
@@ -2666,8 +2664,8 @@ declare class BroadcastReceiverProvider implements IBroadcastReceiverProvider {
 
 /**
  * 标注当前类型是一个广播接收器。
- * @param  {string} uri 广播描述符。
- * @param  {number} priority? 广播优先级。
+ * @param uri 广播描述符。
+ * @param priority 广播优先级。
  */
 declare function receivable(uri: string, priority?: number): (receiverType: Function) => void;
 
@@ -2680,7 +2678,7 @@ interface ICommandExecutor {
     /**
      * 执行命令。
      * @param  {string} commandText 指定要执行的命令表达式文本。
-     * @param  {any} parameter? 指定的输入参数。
+     * @param  {any} parameter 指定的输入参数。
      * @returns any 返回命令执行的结果。
      */
     execute(commandText: string, parameter?: any): any;
@@ -2877,7 +2875,7 @@ declare class CommandOptionCollection implements IEnumerable<KeyValuePair<string
     /**
      * 对 IEnumerable<T> 进行迭代处理。
      * @param  {Function} callback 每次迭代中执行的回掉函数，当前迭代项将传入该函数。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     forEach(callback: (item: KeyValuePair<string, string>, source: IEnumerable<KeyValuePair<string, string>>) => void, scope?: any): void;
@@ -2945,11 +2943,11 @@ declare class CommandExpression {
     next: CommandExpression;
     /**
      * 初始化命令表达式的新实例。
-     * @param  {PathAnchor} anchor 锚定点。
-     * @param  {string} name 命令名称。
-     * @param  {string} path 命令路径。
-     * @param  {Map} options 命令选项。
-     * @param  {string[]} ...args 命令参数。
+     * @param anchor 锚定点。
+     * @param name 命令名称。
+     * @param path 命令路径。
+     * @param options 命令选项。
+     * @param args 命令参数。
      */
     constructor(anchor: PathAnchor, name: string, path: string, options: Map<string, string>, ...args: Array<string>);
     /**
@@ -3163,7 +3161,7 @@ declare class CommandCollection implements IEnumerable<KeyValuePair<string, ICom
     /**
      * 对 IEnumerable<T> 进行迭代处理。
      * @param  {Function} callback 每次迭代中执行的回掉函数，当前迭代项将传入该函数。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     forEach(callback: (item: KeyValuePair<string, ICommand>, source: IEnumerable<KeyValuePair<string, ICommand>>) => void, scope?: any): void;
@@ -3244,6 +3242,7 @@ declare class CommandExecutor implements ICommandExecutor {
     static default: CommandExecutor;
     /**
      * 初始化命令执行器的新实例。
+     * @param parser 命令行文本解析
      * @constructor
      */
     constructor(parser?: ICommandExpressionParser);
@@ -3390,10 +3389,40 @@ declare class CommandExpressionParser implements ICommandExpressionParser {
 declare function command(path: string): (commandType: Function) => void;
 
 declare class CharUtils {
+    /**
+     * 是否是一个单字符串。
+     * @public
+     * @param  {string} chr
+     * @returns boolean
+     */
     static isChar(char: string): boolean;
+    /**
+     * 判断一个单字符串是否是一个拉丁字符，常规字符串集合。
+     * @public
+     * @param  {string} chr
+     * @returns boolean
+     */
     static isLatin(char: string): boolean;
+    /**
+     * 判断一个单字符串是否是一个ASCII字符。
+     * @public
+     * @param  {string} chr
+     * @returns boolean
+     */
     static isAscii(char: string): boolean;
+    /**
+     * 判断一个单字符串是否是一个数字，大写或者小写字母。
+     * @public
+     * @param  {string} chr
+     * @returns boolean
+     */
     static isLetterOrDigit(char: string): boolean;
+    /**
+     * 判断一个单字符串是否是一个空格。
+     * @public
+     * @param  {string} chr
+     * @returns boolean
+     */
     static isWhiteSpace(char: string): boolean;
 }
 
@@ -3484,9 +3513,34 @@ declare class RegexUtils {
 }
 
 declare class StringUtils {
+    /**
+     * 去掉字符串中间特定字符并删除首尾空格，常用语路径。
+     * @public
+     * @param text
+     * @param chars
+     * @returns string
+     */
     static trim(text: string, ...chars: Array<string>): string;
+    /**
+     * 是否手机号码
+     * @public
+     * @param text 手机号码字符串
+     * @returns string
+     */
     static isMobile(text: string): boolean;
+    /**
+     * 是否密码
+     * @public
+     * @param text 密码字符串
+     * @returns string
+     */
     static isPassword(text: string): boolean;
+    /**
+     * 返回固定长度 随机大小写英文数字混合字符串
+     * @public
+     * @param count 随机数长度
+     * @returns string
+     */
     static generateRandom(count: number): string;
 }
 
@@ -3559,7 +3613,7 @@ declare class LogEntry {
      * @param  {LogLevel} level 日志级别。
      * @param  {any} source 日志来源。
      * @param  {string} message 消息。
-     * @param  {any} data? 附带数据。
+     * @param  {any} data 附带数据。
      */
     constructor(level: LogLevel, source: any, message: string, data?: any);
 }
@@ -3610,7 +3664,7 @@ declare class Logger {
      * @static
      * @param  {any} source 日志来源。
      * @param  {string} message 日志消息。
-     * @param  {any} data? 附带数据。
+     * @param  {any} data 附带数据。
      * @returns void
      */
     static debug(source: any, message: string, data?: any): void;
@@ -3619,7 +3673,7 @@ declare class Logger {
      * @static
      * @param  {any} source 日志来源。
      * @param  {string} message 日志消息。
-     * @param  {any} data? 附带数据。
+     * @param  {any} data 附带数据。
      * @returns void
      */
     static warn(source: any, message: string, data?: any): void;
@@ -3628,7 +3682,7 @@ declare class Logger {
      * @static
      * @param  {any} source 日志来源。
      * @param  {string} message 日志消息。
-     * @param  {any} data? 附带数据。
+     * @param  {any} data 附带数据。
      * @returns void
      */
     static error(source: any, message: string, data?: any): void;
@@ -3638,7 +3692,7 @@ declare class Logger {
      * @param  {LogLevel} level 日志级别。
      * @param  {any} source 日志来源。
      * @param  {string} message 日志消息。
-     * @param  {any} data? 附带数据。
+     * @param  {any} data 附带数据。
      * @returns void
      */
     private static write;
@@ -3650,7 +3704,9 @@ declare class Logger {
  * @version 1.0.0
  */
 declare class Exception extends Error {
-    constructor(message?: string);
+    name: string;
+    message: string;
+    constructor(name: string, message?: string);
 }
 
 /**
@@ -3686,8 +3742,8 @@ declare class Activator {
     private constructor();
     /**
      * 创建指定类型的实例。
-     * @param  {string|Function} type 类型字符串或类型构造函数。
-     * @param  {any[]} ...params 需要传递给构造函数的参数。
+     * @param type 类型字符串或类型构造函数。
+     * @param params 需要传递给构造函数的参数。
      * @returns T
      */
     static createInstance<T>(type: string | Function, ...params: Array<any>): T;

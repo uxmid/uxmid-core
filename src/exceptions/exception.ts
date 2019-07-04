@@ -7,8 +7,27 @@
 
 export default class Exception extends Error
 {
-    public constructor(message?: string)
+    /**
+     * 异常名称
+     * @public
+     * @member
+     * @returns string
+     */
+    public name: string = "";
+
+    /**
+     * 异常消息内容
+     * @public
+     * @member
+     * @returns string
+     */
+    public message: string = "";
+
+    public constructor(name: string, message?: string)
     {
-        super(message);
+        super();
+
+        this.name = name;
+        this.message = message;
     }
 }

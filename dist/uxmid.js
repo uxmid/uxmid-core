@@ -48,8 +48,13 @@
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var Exception = /** @class */ (function (_super) {
 	    __extends(Exception, _super);
-	    function Exception(message) {
-	        return _super.call(this, message) || this;
+	    function Exception(name, message) {
+	        var _this = _super.call(this) || this;
+	        _this.name = "";
+	        _this.message = "";
+	        _this.name = name;
+	        _this.message = message;
+	        return _this;
 	    }
 	    return Exception;
 	}(Error));
@@ -82,7 +87,7 @@
 	var ArgumentException = /** @class */ (function (_super) {
 	    __extends(ArgumentException, _super);
 	    function ArgumentException(message) {
-	        return _super.call(this, message) || this;
+	        return _super.call(this, "ArgumentException", message) || this;
 	    }
 	    return ArgumentException;
 	}(exception.default));
@@ -115,7 +120,7 @@
 	var InvalidOperationException = /** @class */ (function (_super) {
 	    __extends(InvalidOperationException, _super);
 	    function InvalidOperationException(message) {
-	        return _super.call(this, message) || this;
+	        return _super.call(this, "InvalidOperationException", message) || this;
 	    }
 	    return InvalidOperationException;
 	}(exception.default));
@@ -162,7 +167,7 @@
 	     * 初始化 EventArgs 类的新实例。
 	     * @constructor
 	     * @param  {string} type 事件类型。
-	     * @param  {any?} data 可选数据。
+	     * @param  {any} data 可选数据。
 	     */
 	    function EventArgs(type, data) {
 	        if (!type) {
@@ -479,7 +484,7 @@
 	    /**
 	     * 对 IEnumerable<T> 进行迭代处理。
 	     * @param  {Function} callback 每次迭代中执行的回掉函数，当前迭代项将传入该函数。
-	     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+	     * @param  {any} scope 回掉函数中 this 所引用的对象。
 	     * @returns void
 	     */
 	    Map.prototype.forEach = function (callback, scope) {
@@ -544,7 +549,7 @@
 	var Set = /** @class */ (function () {
 	    /**
 	     * 初始化 Set<T> 的新实例。
-	     * @param  {Array<T>} ...values
+	     * @param values 初始化参数
 	     */
 	    function Set() {
 	        var _a;
@@ -569,7 +574,7 @@
 	    });
 	    /**
 	     * 将元素添加到 Set<T> 的结尾处。
-	     * @param  {T[]} ...values 要添加到 Set<T> 末尾处的元素。
+	     * @param values 要添加到 Set<T> 末尾处的元素。
 	     * @returns Set
 	     */
 	    Set.prototype.add = function () {
@@ -641,7 +646,7 @@
 	    /**
 	     * 搜索指定的元素，并返回整个 Set<T> 中第一个匹配项的从零开始的索引。
 	     * @param  {T} value 要在 Set<T> 中定位的元素。对于引用类型，该值可以为 null。
-	     * @param  {number} index? 从零开始的搜索的起始索引。
+	     * @param  {number} index 从零开始的搜索的起始索引。
 	     * @returns number 如果在整个 Set<T> 中找到 value 的第一个匹配项，则为该项的从零开始的索引；否则为 -1。
 	     */
 	    Set.prototype.indexOf = function (value, index) {
@@ -673,7 +678,7 @@
 	    /**
 	     * 搜索与指定谓词所定义的条件相匹配的元素，并返回 Set<T> 中第一个匹配元素。
 	     * @param  {Function} callback 定义要搜索的元素的条件。
-	     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+	     * @param  {any} scope 回掉函数中 this 所引用的对象。
 	     * @returns T
 	     */
 	    Set.prototype.find = function (callback, scope) {
@@ -687,7 +692,7 @@
 	    };
 	    /**
 	     * 使用指定的比较器对整个 Set<T> 中的元素进行排序。
-	     * @param  {Function} comparer? 比较元素时要使用的比较器函数。
+	     * @param  {Function} comparer 比较元素时要使用的比较器函数。
 	     * @returns void
 	     */
 	    Set.prototype.sort = function (comparer) {
@@ -1123,7 +1128,7 @@
 	var EventProvider = /** @class */ (function () {
 	    /**
 	     * 初始化事件提供程序的新实例。
-	     * @param  {any} source? 事件源实例。
+	     * @param  {any} source 事件源实例。
 	     */
 	    function EventProvider(source) {
 	        // 保存事件源对象
@@ -1137,8 +1142,8 @@
 	     * 由于垃圾回收器不会删除仍包含引用的对象，因此不会从内存中自动删除使用已注册事件侦听器的对象。
 	     * @param  {string} type 事件类型。
 	     * @param  {Function} 处理事件的侦听器函数。
-	     * @param  {any} scope? 侦听函数绑定的 this 对象。
-	     * @param  {boolean} once? 是否添加仅回调一次的事件侦听器，如果此参数设为 true 则在第一次回调时就自动移除监听。
+	     * @param  {any} scope 侦听函数绑定的 this 对象。
+	     * @param  {boolean} once 是否添加仅回调一次的事件侦听器，如果此参数设为 true 则在第一次回调时就自动移除监听。
 	     * @returns void
 	     */
 	    EventProvider.prototype.addListener = function (type, listener, scope, once) {
@@ -1162,10 +1167,10 @@
 	        entries.push(new EventEntry(type, listener, scope, once));
 	    };
 	    /**
-	     * 移除侦听器。如果没有注册任何匹配的侦听器，则对此方法的调用没有任何效果。
-	     * @param  {string} type 事件类型。
-	     * @param  {Function} listener 处理事件的侦听器函数。
-	     * @param  {any} scope? 侦听函数绑定的 this 对象。
+	     * 移除侦听器。如果没有注册任何匹配的侦听器，则对此方法的调用没有任何效果。 侦听函数绑定的 this 对象。
+	     * @param type 事件类型。
+	     * @param listener 处理事件的侦听器函数。
+	     * @param scope 侦听函数绑定的 this 对象。
 	     * @returns void
 	     */
 	    EventProvider.prototype.removeListener = function (type, listener, scope) {
@@ -1406,15 +1411,39 @@
 	var CharUtils = /** @class */ (function () {
 	    function CharUtils() {
 	    }
+	    /**
+	     * 是否是一个单字符串。
+	     * @public
+	     * @param  {string} chr
+	     * @returns boolean
+	     */
 	    CharUtils.isChar = function (char) {
 	        return runtime.Type.isString(char) && char.length === 1;
 	    };
+	    /**
+	     * 判断一个单字符串是否是一个拉丁字符，常规字符串集合。
+	     * @public
+	     * @param  {string} chr
+	     * @returns boolean
+	     */
 	    CharUtils.isLatin = function (char) {
 	        return char.charCodeAt(0) <= 255;
 	    };
+	    /**
+	     * 判断一个单字符串是否是一个ASCII字符。
+	     * @public
+	     * @param  {string} chr
+	     * @returns boolean
+	     */
 	    CharUtils.isAscii = function (char) {
 	        return char.charCodeAt(0) <= 127;
 	    };
+	    /**
+	     * 判断一个单字符串是否是一个数字，大写或者小写字母。
+	     * @public
+	     * @param  {string} chr
+	     * @returns boolean
+	     */
 	    CharUtils.isLetterOrDigit = function (char) {
 	        if (!this.isChar(char)) {
 	            return false;
@@ -1422,6 +1451,12 @@
 	        var regex = /^[0-9a-zA-Z]*$/g;
 	        return regex.test(char);
 	    };
+	    /**
+	     * 判断一个单字符串是否是一个空格。
+	     * @public
+	     * @param  {string} chr
+	     * @returns boolean
+	     */
 	    CharUtils.isWhiteSpace = function (char) {
 	        if (!this.isChar(char)) {
 	            return false;
@@ -1582,6 +1617,13 @@
 	var StringUtils = /** @class */ (function () {
 	    function StringUtils() {
 	    }
+	    /**
+	     * 去掉字符串中间特定字符并删除首尾空格，常用语路径。
+	     * @public
+	     * @param text
+	     * @param chars
+	     * @returns string
+	     */
 	    StringUtils.trim = function (text) {
 	        var chars = [];
 	        for (var _i = 1; _i < arguments.length; _i++) {
@@ -1593,12 +1635,30 @@
 	        }
 	        return text.trim();
 	    };
+	    /**
+	     * 是否手机号码
+	     * @public
+	     * @param text 手机号码字符串
+	     * @returns string
+	     */
 	    StringUtils.isMobile = function (text) {
 	        return /^1[34578]\d{9}$/.test(text);
 	    };
+	    /**
+	     * 是否密码
+	     * @public
+	     * @param text 密码字符串
+	     * @returns string
+	     */
 	    StringUtils.isPassword = function (text) {
 	        return text.length >= 6 && text.length <= 16;
 	    };
+	    /**
+	     * 返回固定长度 随机大小写英文数字混合字符串
+	     * @public
+	     * @param count 随机数长度
+	     * @returns string
+	     */
 	    StringUtils.generateRandom = function (count) {
 	        var result = "";
 	        for (var i = 0; i < count; i++) {
@@ -1760,7 +1820,7 @@
 	     * @param  {LogLevel} level 日志级别。
 	     * @param  {any} source 日志来源。
 	     * @param  {string} message 消息。
-	     * @param  {any} data? 附带数据。
+	     * @param  {any} data 附带数据。
 	     */
 	    function LogEntry(level, source, message, data) {
 	        this._level = level;
@@ -1866,7 +1926,7 @@
 	     * @static
 	     * @param  {any} source 日志来源。
 	     * @param  {string} message 日志消息。
-	     * @param  {any} data? 附带数据。
+	     * @param  {any} data 附带数据。
 	     * @returns void
 	     */
 	    Logger.debug = function (source, message, data) {
@@ -1877,7 +1937,7 @@
 	     * @static
 	     * @param  {any} source 日志来源。
 	     * @param  {string} message 日志消息。
-	     * @param  {any} data? 附带数据。
+	     * @param  {any} data 附带数据。
 	     * @returns void
 	     */
 	    Logger.warn = function (source, message, data) {
@@ -1888,7 +1948,7 @@
 	     * @static
 	     * @param  {any} source 日志来源。
 	     * @param  {string} message 日志消息。
-	     * @param  {any} data? 附带数据。
+	     * @param  {any} data 附带数据。
 	     * @returns void
 	     */
 	    Logger.error = function (source, message, data) {
@@ -1900,7 +1960,7 @@
 	     * @param  {LogLevel} level 日志级别。
 	     * @param  {any} source 日志来源。
 	     * @param  {string} message 日志消息。
-	     * @param  {any} data? 附带数据。
+	     * @param  {any} data 附带数据。
 	     * @returns void
 	     */
 	    Logger.write = function (level, source, message, data) {
@@ -2086,10 +2146,10 @@
 	     * 为指定的事件类型注册一个侦听器，以使侦听器能够接收事件通知。
 	     * @summary 如果不再需要某个事件侦听器，可调用 removeListener() 删除它，否则会产生内存问题。
 	     * 由于垃圾回收器不会删除仍包含引用的对象，因此不会从内存中自动删除使用已注册事件侦听器的对象。
-	     * @param  {string} type 事件类型。
-	     * @param  {Function} 处理事件的侦听器函数。
-	     * @param  {any} scope? 侦听函数绑定的 this 对象。
-	     * @param  {boolean} once? 是否添加仅回调一次的事件侦听器，如果此参数设为 true 则在第一次回调时就自动移除监听。
+	     * @param type 事件类型。
+	     * @param listener 处理事件的侦听器函数。
+	     * @param scope 侦听函数绑定的 this 对象。
+	     * @param once 是否添加仅回调一次的事件侦听器，如果此参数设为 true 则在第一次回调时就自动移除监听。
 	     * @returns void
 	     */
 	    Application.addListener = function (type, listener, scope, once) {
@@ -2097,9 +2157,9 @@
 	    };
 	    /**
 	     * 移除侦听器。如果没有注册任何匹配的侦听器，则对此方法的调用没有任何效果。
-	     * @param  {string} type 事件类型。
-	     * @param  {Function} listener 处理事件的侦听器函数。
-	     * @param  {any} scope? 侦听函数绑定的 this 对象。
+	     * @param type 事件类型。
+	     * @param listener 处理事件的侦听器函数。
+	     * @param scope 侦听函数绑定的 this 对象。
 	     * @returns void
 	     */
 	    Application.removeListener = function (type, listener, scope) {
@@ -2107,7 +2167,7 @@
 	    };
 	    /**
 	     * 派发一个指定参数的事件。
-	     * @param  {EventArgs} eventArgs 事件参数实例。
+	     * @param eventArgs 事件参数实例。
 	     * @returns void
 	     */
 	    Application.dispatchEvent = function (args) {
@@ -2116,8 +2176,7 @@
 	    /**
 	     * 初始化全局模块。
 	     * @private
-	     * @static
-	     * @param  {ApplicationContextBase} context
+	     * @param context 应用上下文
 	     * @returns void
 	     */
 	    Application.initializeGlobalModules = function (context) {
@@ -2130,8 +2189,7 @@
 	    /**
 	     * 卸载全局模块。
 	     * @private
-	     * @static
-	     * @param  {ApplicationContextBase} context
+	     * @param context 应用上下文
 	     * @returns void
 	     */
 	    Application.disposeGlobalModules = function (context) {
@@ -2469,8 +2527,8 @@
 	    }
 	    /**
 	     * 创建指定类型的实例。
-	     * @param  {string|Function} type 类型字符串或类型构造函数。
-	     * @param  {any[]} ...params 需要传递给构造函数的参数。
+	     * @param type 类型字符串或类型构造函数。
+	     * @param params 需要传递给构造函数的参数。
 	     * @returns T
 	     */
 	    Activator.createInstance = function (type) {
@@ -3104,7 +3162,7 @@
 	     * 对当前仓储进行迭代处理。
 	     * @override
 	     * @param  {Function} callback 每次迭代中执行的回掉函数，当前迭代项及它的索引号将被作为参数传入该方法。
-	     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+	     * @param  {any} scope 回掉函数中 this 所引用的对象。
 	     * @returns void
 	     */
 	    ServiceStorage.prototype.forEach = function (callback, scope) {
@@ -3148,8 +3206,8 @@
 	var ServiceProvider = /** @class */ (function () {
 	    /**
 	     * 初始化服务提供程序的新实例。
-	     * @param  {IServiceStorage} storage? 服务仓储实例。
-	     * @param  {IServiceBuilder} builder? 服务生成器实例。
+	     * @param  {IServiceStorage} storage 服务仓储实例。
+	     * @param  {IServiceBuilder} builder 服务生成器实例。
 	     */
 	    function ServiceProvider(storage, builder) {
 	        // 如果服务仓储为空，则使用默认的仓储
@@ -3296,7 +3354,7 @@
 	var ServiceProviderFactory = /** @class */ (function () {
 	    /**
 	     * 初始化服务提供程序工厂的新实例。
-	     * @param  {string} defaultName? 默认提供程序名称。
+	     * @param  {string} defaultName 默认提供程序名称。
 	     */
 	    function ServiceProviderFactory(defaultName) {
 	        if (defaultName === void 0) { defaultName = ""; }
@@ -3388,7 +3446,7 @@
 	    /**
 	     * 对 IEnumerable<T> 进行迭代处理。
 	     * @param  {Function} callback 每次迭代中执行的回掉函数，当前迭代项将被作为参数传入该函数。
-	     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+	     * @param  {any} scope 回掉函数中 this 所引用的对象。
 	     * @returns void
 	     */
 	    ServiceProviderFactory.prototype.forEach = function (callback, scope) {
@@ -3407,7 +3465,7 @@
 	/**
 	 * 标注当前类型是一个可注入的服务。
 	 * @summary 如果未指定 providerName 参数则默认注入至默认服务容器中。
-	 * @param  {string} providerName? 服务容器名称。
+	 * @param providerName 服务容器名称。
 	 */
 	function injectable(providerName) {
 	    return function (serviceType) {
@@ -3448,7 +3506,7 @@
 	     * @param {string} type 事件类型。
 	     * @param  {string} actionName 操作名称。
 	     * @param  {WorkerState} state 发生改变的状态。
-	     * @param  {Error} error? 发生状态改变时产生的异常。
+	     * @param  {Error} error 发生状态改变时产生的异常。
 	     */
 	    function WorkerStateChangedEventArgs(type, actionName, state, error) {
 	        var _this = _super.call(this, type) || this;
@@ -3612,7 +3670,7 @@
 	    /**
 	     * 启动工作器。
 	     * @async
-	     * @param  {Array<string>} ...args 启动的参数。
+	     * @param args 启动的参数。
 	     * @returns void
 	     */
 	    WorkerBase.prototype.start = function () {
@@ -3657,7 +3715,7 @@
 	    /**
 	     * 停止工作器。
 	     * @async
-	     * @param  {Array<string>} ...args 停止的参数。
+	     * @param args 停止的参数。
 	     * @returns void
 	     */
 	    WorkerBase.prototype.stop = function () {
@@ -3943,7 +4001,7 @@
 	    /**
 	     * 初始化应用程序上下文的新实例。
 	     * @protected
-	     * @param  {string} applicationId? 应用程序的唯一代号。
+	     * @param applicationId 应用程序的唯一代号。
 	     */
 	    function ApplicationContextBase(applicationId) {
 	        if (applicationId) {
@@ -4000,7 +4058,7 @@
 	        configurable: true
 	    });
 	    Object.defineProperty(ApplicationContextBase.prototype, "modules", {
-	        /** 吗
+	        /**
 	         * 获取当前应用程序的模块集合。
 	         * @property
 	         * @returns ISet
@@ -4065,7 +4123,7 @@
 	    });
 	    /**
 	     * 返回当前应用程序的工作台(主界面)。
-	     * @param  {Array<string>} args 初始化的参数。
+	     * @param args 初始化的参数。
 	     * @returns IWorkbench 返回新建或已创建的工作台对象。
 	     */
 	    ApplicationContextBase.prototype.getWorkbench = function (args) {
@@ -4299,7 +4357,7 @@
 	    /**
 	     * 关闭工作台。
 	     * @async
-	     * @returns boolean
+	     * @returns Promise<boolean>
 	     */
 	    WorkbenchBase.prototype.close = function () {
 	        return __awaiter(this, void 0, void 0, function () {
@@ -4695,7 +4753,7 @@
 	     * 初始化一个广播新实例。
 	     * @property
 	     * @param  {string} uri 广播描述符。
-	     * @param  {Map<string, any>} extras? 携带的数据。
+	     * @param  {Map<string, any>} extras 携带的数据。
 	     */
 	    function Broadcast(uri, extras) {
 	        if (!uri || !common.RegexUtils.uri.test(uri)) {
@@ -5115,7 +5173,7 @@
 	var BroadcastManager = /** @class */ (function () {
 	    /**
 	     * 初始化广播管理器的新实例。
-	     * @param  {IBroadcastReceiverProvider} receiverProvider? 广播接收器提供程序。
+	     * @param  {IBroadcastReceiverProvider} receiverProvider 广播接收器提供程序。
 	     */
 	    function BroadcastManager(receiverProvider) {
 	        this._eventProvider = new events.EventProvider(this);
@@ -5273,8 +5331,8 @@
 	var receivers = new collections.Map();
 	/**
 	 * 标注当前类型是一个广播接收器。
-	 * @param  {string} uri 广播描述符。
-	 * @param  {number} priority? 广播优先级。
+	 * @param uri 广播描述符。
+	 * @param priority 广播优先级。
 	 */
 	function receivable(uri, priority) {
 	    if (!uri) {
@@ -5558,7 +5616,7 @@
 	    /**
 	     * 对 IEnumerable<T> 进行迭代处理。
 	     * @param  {Function} callback 每次迭代中执行的回掉函数，当前迭代项将传入该函数。
-	     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+	     * @param  {any} scope 回掉函数中 this 所引用的对象。
 	     * @returns void
 	     */
 	    CommandCollection.prototype.forEach = function (callback, scope) {
@@ -5768,7 +5826,7 @@
 	    /**
 	     * 对 IEnumerable<T> 进行迭代处理。
 	     * @param  {Function} callback 每次迭代中执行的回掉函数，当前迭代项将传入该函数。
-	     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+	     * @param  {any} scope 回掉函数中 this 所引用的对象。
 	     * @returns void
 	     */
 	    CommandOptionCollection.prototype.forEach = function (callback, scope) {
@@ -5795,11 +5853,11 @@
 	var CommandExpression = /** @class */ (function () {
 	    /**
 	     * 初始化命令表达式的新实例。
-	     * @param  {PathAnchor} anchor 锚定点。
-	     * @param  {string} name 命令名称。
-	     * @param  {string} path 命令路径。
-	     * @param  {Map} options 命令选项。
-	     * @param  {string[]} ...args 命令参数。
+	     * @param anchor 锚定点。
+	     * @param name 命令名称。
+	     * @param path 命令路径。
+	     * @param options 命令选项。
+	     * @param args 命令参数。
 	     */
 	    function CommandExpression(anchor, name, path, options) {
 	        var args = [];
@@ -6378,6 +6436,7 @@
 	var CommandExecutor = /** @class */ (function () {
 	    /**
 	     * 初始化命令执行器的新实例。
+	     * @param parser 命令行文本解析
 	     * @constructor
 	     */
 	    function CommandExecutor(parser) {
