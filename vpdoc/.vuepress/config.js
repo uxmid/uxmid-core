@@ -61,35 +61,11 @@ module.exports =
                                 "reflection",
                                 "runtime",
                                 "service"
-                            ],
+                            ]
                         }
-                        // {
-                        //     title: "参考",
-                        //     collapsable: false,
-                        //     children: ["faq", "migration", "env-variables"],
-                        // }
-                    ],
-                    // "/zh/config/": [""],
-                    // "/zh/api/": [""],
-                    // "/zh/plugin/": [
-                        // {
-                        //     title: "插件",
-                        //     collapsable: false,
-                        //     children: [""],
-                        // },
-                        // {
-                        //     title: "官方插件",
-                        //     collapsable: false,
-                        //     children: ["umi-plugin-react", "umi-plugin-prerender"],
-                        // },
-                        // {
-                        //     title: "插件开发",
-                        //     collapsable: false,
-                        //     children: ["develop"],
-                        // }
-                    // ],
-                },
+                    ]
+                }
             }
-        },
-    },
+        }
+    }
 };
