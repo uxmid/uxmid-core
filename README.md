@@ -11,3 +11,6 @@
 ``` sh
 npm i uxmid-core --save
 ```
+
+## 使用文档
+[参考文档](https://uxmid.github.io/uxmid-core/)

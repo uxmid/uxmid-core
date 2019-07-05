@@ -36,7 +36,7 @@ module.exports =
                 nav:
                 [
                     { text: "指南", link: "/guide/" },
-                    { text: "API", link: "https://github.com/uxmid/uxmid-core/docs/typedoc/globals.html" },
+                    { text: "API", link: "https://uxmid.github.io/uxmid-core/typedoc/globals.html" },
                     { text: "发布日志", link: "https://github.com/uxmid/uxmid-core/releases" }
                 ],
                 sidebar:
