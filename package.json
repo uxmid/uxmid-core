@@ -9,7 +9,7 @@
         "build": "npm run lint && npm run build:compile && npm run build:dist && npm run mini",
         "mini": "uglifyjs ./dist/uxmid.js --compress --mangle --mangle-props --mangle-regex='/^_/' --reserved 'Promise' > ./dist/uxmid.min.js",
         "unit": "karma start test/unit/karma.conf.js",
-        "docs": "typedoc",
+        "docs": "vuepress build vpdoc && typedoc",
         "test": "npm run unit"
     },
     "files": [

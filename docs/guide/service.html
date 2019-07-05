@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>服务容器 | uxmid-core</title>
+    <meta name="description" content="🌋 可插拔的企业级应用框架。">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.85444ae0.css" as="style"><link rel="preload" href="/assets/js/app.1bce08f9.js" as="script"><link rel="preload" href="/assets/js/2.c5513eae.js" as="script"><link rel="preload" href="/assets/js/19.67962d8f.js" as="script"><link rel="prefetch" href="/assets/js/10.c038ef3a.js"><link rel="prefetch" href="/assets/js/11.4c482bfc.js"><link rel="prefetch" href="/assets/js/12.49092e4e.js"><link rel="prefetch" href="/assets/js/13.34420f15.js"><link rel="prefetch" href="/assets/js/14.8b831b62.js"><link rel="prefetch" href="/assets/js/15.bd361736.js"><link rel="prefetch" href="/assets/js/16.5c614136.js"><link rel="prefetch" href="/assets/js/17.57e65344.js"><link rel="prefetch" href="/assets/js/18.7d4729ba.js"><link rel="prefetch" href="/assets/js/20.35183c29.js"><link rel="prefetch" href="/assets/js/3.ecf029e2.js"><link rel="prefetch" href="/assets/js/4.ee68659e.js"><link rel="prefetch" href="/assets/js/5.5e38435a.js"><link rel="prefetch" href="/assets/js/6.30045e07.js"><link rel="prefetch" href="/assets/js/7.c7411a8b.js"><link rel="prefetch" href="/assets/js/8.e29dc5c8.js"><link rel="prefetch" href="/assets/js/9.e7f9a351.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.85444ae0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">uxmid-core</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">指南</a></div><div class="nav-item"><a href="https://github.com/uxmid/uxmid-core/docs/typedoc/globals.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  API
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/uxmid/uxmid-core/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  发布日志
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/uxmid/uxmid-core" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">指南</a></div><div class="nav-item"><a href="https://github.com/uxmid/uxmid-core/docs/typedoc/globals.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  API
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/uxmid/uxmid-core/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  发布日志
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/uxmid/uxmid-core" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>指南</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" class="sidebar-link">介绍</a></li><li><a href="/guide/getting-started.html" class="sidebar-link">快速上手</a></li><li><a href="/guide/create-app.html" class="sidebar-link">创建Application</a></li><li><a href="/guide/broadcast.html" class="sidebar-link">广播</a></li><li><a href="/guide/collections.html" class="sidebar-link">集合</a></li><li><a href="/guide/commands.html" class="sidebar-link">命令</a></li><li><a href="/guide/common.html" class="sidebar-link">通用拓展方法</a></li><li><a href="/guide/log.html" class="sidebar-link">日志(Logger)</a></li><li><a href="/guide/event.html" class="sidebar-link">事件</a></li><li><a href="/guide/exception.html" class="sidebar-link">异常</a></li><li><a href="/guide/reflection.html" class="sidebar-link">反射</a></li><li><a href="/guide/runtime.html" class="sidebar-link">运行环境</a></li><li><a href="/guide/service.html" class="active sidebar-link">服务容器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/service.html#实现" class="sidebar-link">实现</a></li><li class="sidebar-sub-header"><a href="/guide/service.html#构建服务容器" class="sidebar-link">构建服务容器</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="服务容器"><a href="#服务容器" aria-hidden="true" class="header-anchor">#</a> 服务容器</h1> <p>所有与网络请求相关的，我们都抽离到<code>service</code>中去处理了，在页面中<code>model</code>中应当只处理页面相关的逻辑。</p> <h2 id="实现"><a href="#实现" aria-hidden="true" class="header-anchor">#</a> 实现</h2> <h3 id="url集合"><a href="#url集合" aria-hidden="true" class="header-anchor">#</a> <code>url</code>集合</h3> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// urls.ts</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span>
+<span class="token punctuation">{</span>
+    login<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>apiUrl<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/oauth/token`</span></span><span class="token punctuation">,</span>                                        <span class="token comment">// 登录</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="请求类集合"><a href="#请求类集合" aria-hidden="true" class="header-anchor">#</a> 请求类集合</h3> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// apis.ts</span>
+<span class="token keyword">import</span> ArgumentException <span class="token keyword">from</span> <span class="token string">&quot;uxmid-core&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">&quot;axios&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * 发送ajax请求
+ * @param {any} options 请求参数
+ * @param {string} url 请求地址
+ * @param {string} method 请求类型
+ * @returns {any}
+ */</span>
+<span class="token keyword">const</span> send <span class="token operator">=</span> <span class="token punctuation">(</span>url<span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> options<span class="token operator">?</span><span class="token punctuation">:</span> IHttpRequest<span class="token punctuation">,</span> method<span class="token punctuation">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">&quot;post&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token parameter">IHttpResponse</span> <span class="token operator">=&gt;</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// 如果未传入url以及参数抛出异常</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>url<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token string">&quot;url is null.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 返回promise实例由用户处理</span>
+    <span class="token keyword">return</span> axios<span class="token punctuation">[</span>method<span class="token punctuation">]</span><span class="token punctuation">(</span>
+    <span class="token punctuation">{</span>
+        url<span class="token punctuation">,</span>
+        <span class="token operator">...</span>options
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Apis</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token function-variable function">login</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">options<span class="token operator">?</span><span class="token punctuation">:</span> IHttpRequest</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">send</span><span class="token punctuation">(</span><span class="token constant">API</span><span class="token punctuation">.</span>login<span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 登录接口</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="service-基类"><a href="#service-基类" aria-hidden="true" class="header-anchor">#</a> <code>service</code> 基类</h3> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> apis <span class="token keyword">from</span> <span class="token string">&quot;apis&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * 业务服务基类。
+ * @abstract
+ * @class
+ * @version 1.0.0
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">ServiceBase</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * 获取所有数据接口地址。
+     * @protected
+     * @property
+     * @returns apis
+     */</span>
+    <span class="token keyword">protected</span> <span class="token keyword">get</span> <span class="token function">apis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> apis
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">apis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="构建服务容器"><a href="#构建服务容器" aria-hidden="true" class="header-anchor">#</a> 构建服务容器</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// services/user-service.ts</span>
+<span class="token comment">/**
+ * 表示用户相关服务。
+ * @class
+ * @version 1.0.0
+ */</span>
+@<span class="token function">injectable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">UserService</span> <span class="token keyword">extends</span> <span class="token class-name">ServiceBase</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">async</span> <span class="token function">login</span><span class="token punctuation">(</span>model<span class="token punctuation">:</span> ILoginModel<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// 登录之前清空上次的凭证</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>applicationContext<span class="token punctuation">.</span>credential <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>apis<span class="token punctuation">.</span><span class="token function">login</span>
+        <span class="token punctuation">(</span><span class="token punctuation">{</span>
+            data<span class="token punctuation">:</span>
+            <span class="token punctuation">{</span>
+                username<span class="token punctuation">:</span> model<span class="token punctuation">.</span>username<span class="token punctuation">,</span>
+                password<span class="token punctuation">:</span> model<span class="token punctuation">.</span>password
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="页面上使用"><a href="#页面上使用" aria-hidden="true" class="header-anchor">#</a> 页面上使用</h3> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> userService <span class="token keyword">from</span> <span class="token string">&quot;./user-service&quot;</span><span class="token punctuation">;</span>
+
+@component
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">LoginView</span> <span class="token keyword">extends</span> <span class="token class-name">View</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">private</span> _userService<span class="token punctuation">:</span> UserService<span class="token punctuation">;</span>                      <span class="token comment">// 用户服务</span>
+
+    <span class="token comment">/**
+     * 获取或设置用户服务实例。
+     * @member
+     * @protected
+     * @returns UserService
+     */</span>
+    <span class="token keyword">protected</span> <span class="token keyword">get</span> <span class="token function">userService</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> UserService
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>_userService<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>_userService <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>serviceProvier<span class="token punctuation">.</span>resolve<span class="token operator">&lt;</span>UserService<span class="token operator">&gt;</span><span class="token punctuation">(</span>UserService<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>_userService<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">protected</span> <span class="token keyword">async</span> <span class="token function">login</span><span class="token punctuation">(</span>username<span class="token punctuation">,</span> password<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">try</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>userServiec<span class="token punctuation">.</span><span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">{</span>username<span class="token punctuation">,</span> password<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&quot;login&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">catch</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span>message <span class="token operator">||</span> <span class="token string">&quot;登录失败&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/uxmid/uxmid-core/edit/master/docs/guide/service.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/guide/runtime.html" class="prev">
+          运行环境
+        </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.1bce08f9.js" defer></script><script src="/assets/js/2.c5513eae.js" defer></script><script src="/assets/js/19.67962d8f.js" defer></script>
+  </body>
+</html>

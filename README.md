@@ -11,8 +11,3 @@
 ``` sh
 npm i uxmid-core --save
 ```
-
-## 应用程序
-application是应用的核心骨架，它抽象出了一个项目的生命周期，是一种工作方式的抽象，可集合到主流的Vue, React, Angular项目中。
-
-[#示例详解](./mds/application.md)

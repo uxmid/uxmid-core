@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>事件 | uxmid-core</title>
+    <meta name="description" content="🌋 可插拔的企业级应用框架。">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.85444ae0.css" as="style"><link rel="preload" href="/assets/js/app.1bce08f9.js" as="script"><link rel="preload" href="/assets/js/2.c5513eae.js" as="script"><link rel="preload" href="/assets/js/12.49092e4e.js" as="script"><link rel="prefetch" href="/assets/js/10.c038ef3a.js"><link rel="prefetch" href="/assets/js/11.4c482bfc.js"><link rel="prefetch" href="/assets/js/13.34420f15.js"><link rel="prefetch" href="/assets/js/14.8b831b62.js"><link rel="prefetch" href="/assets/js/15.bd361736.js"><link rel="prefetch" href="/assets/js/16.5c614136.js"><link rel="prefetch" href="/assets/js/17.57e65344.js"><link rel="prefetch" href="/assets/js/18.7d4729ba.js"><link rel="prefetch" href="/assets/js/19.67962d8f.js"><link rel="prefetch" href="/assets/js/20.35183c29.js"><link rel="prefetch" href="/assets/js/3.ecf029e2.js"><link rel="prefetch" href="/assets/js/4.ee68659e.js"><link rel="prefetch" href="/assets/js/5.5e38435a.js"><link rel="prefetch" href="/assets/js/6.30045e07.js"><link rel="prefetch" href="/assets/js/7.c7411a8b.js"><link rel="prefetch" href="/assets/js/8.e29dc5c8.js"><link rel="prefetch" href="/assets/js/9.e7f9a351.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.85444ae0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">uxmid-core</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">指南</a></div><div class="nav-item"><a href="https://github.com/uxmid/uxmid-core/docs/typedoc/globals.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  API
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/uxmid/uxmid-core/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  发布日志
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/uxmid/uxmid-core" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">指南</a></div><div class="nav-item"><a href="https://github.com/uxmid/uxmid-core/docs/typedoc/globals.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  API
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/uxmid/uxmid-core/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  发布日志
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/uxmid/uxmid-core" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>指南</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" class="sidebar-link">介绍</a></li><li><a href="/guide/getting-started.html" class="sidebar-link">快速上手</a></li><li><a href="/guide/create-app.html" class="sidebar-link">创建Application</a></li><li><a href="/guide/broadcast.html" class="sidebar-link">广播</a></li><li><a href="/guide/collections.html" class="sidebar-link">集合</a></li><li><a href="/guide/commands.html" class="sidebar-link">命令</a></li><li><a href="/guide/common.html" class="sidebar-link">通用拓展方法</a></li><li><a href="/guide/log.html" class="sidebar-link">日志(Logger)</a></li><li><a href="/guide/event.html" class="active sidebar-link">事件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/event.html#注入事件提供程序" class="sidebar-link">注入事件提供程序</a></li><li class="sidebar-sub-header"><a href="/guide/event.html#事件监听" class="sidebar-link">事件监听</a></li><li class="sidebar-sub-header"><a href="/guide/event.html#触发事件" class="sidebar-link">触发事件</a></li></ul></li><li><a href="/guide/exception.html" class="sidebar-link">异常</a></li><li><a href="/guide/reflection.html" class="sidebar-link">反射</a></li><li><a href="/guide/runtime.html" class="sidebar-link">运行环境</a></li><li><a href="/guide/service.html" class="sidebar-link">服务容器</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="事件"><a href="#事件" aria-hidden="true" class="header-anchor">#</a> 事件</h1> <p>提供一套事件处理程序，包括事件的注册，移除，触发，取消等。</p> <h2 id="注入事件提供程序"><a href="#注入事件提供程序" aria-hidden="true" class="header-anchor">#</a> 注入事件提供程序</h2> <p><code>继承</code>的方式常应用于一个具有生命周期的实例类的场景，<code>引入</code>的方式常用于需要内部仅实现发布订阅的事件逻辑的场景。</p> <div class="language-ts extra-class"><pre class="language-ts"><code>
+<span class="token comment">// 继承</span>
+<span class="token keyword">class</span> <span class="token class-name">AppExtend</span> <span class="token keyword">extends</span> <span class="token class-name">EventProvider</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * 为指定的事件类型注册一个侦听器，以使侦听器能够接收事件通知。
+     * @summary 如果不再需要某个事件侦听器，可调用 removeListener() 删除它，否则会产生内存问题。
+     * 由于垃圾回收器不会删除仍包含引用的对象，因此不会从内存中自动删除使用已注册事件侦听器的对象。
+     * @param type 事件类型。
+     * @param listener 处理事件的侦听器函数。
+     * @param scope 侦听函数绑定的 this 对象。
+     * @param once 是否添加仅回调一次的事件侦听器，如果此参数设为 true 则在第一次回调时就自动移除监听。
+     * @returns void
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token function">addListener</span><span class="token punctuation">(</span><span class="token keyword">type</span><span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> listener<span class="token punctuation">:</span> <span class="token builtin">Function</span><span class="token punctuation">,</span> scope<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token builtin">any</span><span class="token punctuation">,</span> once<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token builtin">boolean</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span><span class="token keyword">type</span><span class="token punctuation">,</span> listener<span class="token punctuation">,</span> scope<span class="token punctuation">,</span> once<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">/**
+     * 移除侦听器。如果没有注册任何匹配的侦听器，则对此方法的调用没有任何效果。
+     * @param type 事件类型。
+     * @param listener 处理事件的侦听器函数。
+     * @param scope 侦听函数绑定的 this 对象。
+     * @returns void
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token function">removeListener</span><span class="token punctuation">(</span><span class="token keyword">type</span><span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> listener<span class="token punctuation">:</span> <span class="token builtin">Function</span><span class="token punctuation">,</span> scope<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">removeListener</span><span class="token punctuation">(</span><span class="token keyword">type</span><span class="token punctuation">,</span> listener<span class="token punctuation">,</span> scope<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">/**
+     * 派发一个指定参数的事件。
+     * @param eventArgs 事件参数实例。
+     * @returns void
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token function">dispatchEvent</span><span class="token punctuation">(</span>args<span class="token punctuation">:</span> EventArgs<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">dispatchEvent</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 引用</span>
+<span class="token keyword">class</span> <span class="token class-name">App</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * 获取一个事件提供程序实例。
+     * @private
+     * @property
+     * @returns IEventProvider
+     */</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">get</span> <span class="token function">eventProvider</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> IEventProvider
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>_eventProvider<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>_eventProvider <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EventProvider</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>_eventProvider<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 为指定的事件类型注册一个侦听器，以使侦听器能够接收事件通知。
+     * @summary 如果不再需要某个事件侦听器，可调用 removeListener() 删除它，否则会产生内存问题。
+     * 由于垃圾回收器不会删除仍包含引用的对象，因此不会从内存中自动删除使用已注册事件侦听器的对象。
+     * @param type 事件类型。
+     * @param listener 处理事件的侦听器函数。
+     * @param scope 侦听函数绑定的 this 对象。
+     * @param once 是否添加仅回调一次的事件侦听器，如果此参数设为 true 则在第一次回调时就自动移除监听。
+     * @returns void
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token function">addListener</span><span class="token punctuation">(</span><span class="token keyword">type</span><span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> listener<span class="token punctuation">:</span> <span class="token builtin">Function</span><span class="token punctuation">,</span> scope<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token builtin">any</span><span class="token punctuation">,</span> once<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token builtin">boolean</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>eventProvider<span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span><span class="token keyword">type</span><span class="token punctuation">,</span> listener<span class="token punctuation">,</span> scope<span class="token punctuation">,</span> once<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">/**
+     * 移除侦听器。如果没有注册任何匹配的侦听器，则对此方法的调用没有任何效果。
+     * @param type 事件类型。
+     * @param listener 处理事件的侦听器函数。
+     * @param scope 侦听函数绑定的 this 对象。
+     * @returns void
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token function">removeListener</span><span class="token punctuation">(</span><span class="token keyword">type</span><span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> listener<span class="token punctuation">:</span> <span class="token builtin">Function</span><span class="token punctuation">,</span> scope<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>eventProvider<span class="token punctuation">.</span><span class="token function">removeListener</span><span class="token punctuation">(</span><span class="token keyword">type</span><span class="token punctuation">,</span> listener<span class="token punctuation">,</span> scope<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">/**
+     * 派发一个指定参数的事件。
+     * @param eventArgs 事件参数实例。
+     * @returns void
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token function">dispatchEvent</span><span class="token punctuation">(</span>args<span class="token punctuation">:</span> EventArgs<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>eventProvider<span class="token punctuation">.</span><span class="token function">dispatchEvent</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="事件监听"><a href="#事件监听" aria-hidden="true" class="header-anchor">#</a> 事件监听</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> AppExtend <span class="token keyword">from</span> <span class="token string">&quot;./app-extend&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 常规监听</span>
+AppExtend<span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span><span class="token string">&quot;hello&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;world&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 监听一次性事件</span>
+AppExtend<span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span><span class="token string">&quot;hello&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;world&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h2 id="触发事件"><a href="#触发事件" aria-hidden="true" class="header-anchor">#</a> 触发事件</h2> <p>创建的事件分两种，一种是常规事件，还提供了一种<code>可取消</code>事件；</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> ApplicationEventArgs<span class="token punctuation">,</span> CancelEventArgs <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;uxmid-core&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// ---------------- 常规事件 ----------------</span>
+<span class="token comment">// 激发 &quot;started&quot; 事件</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">dispatchEvent</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ApplicationEventArgs</span><span class="token punctuation">(</span><span class="token string">&quot;start&quot;</span><span class="token punctuation">,</span> context<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// ---------------- 可取消事件 ----------------</span>
+<span class="token comment">// 创建取消事件参数</span>
+<span class="token keyword">let</span> args <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CancelEventArgs</span><span class="token punctuation">(</span>EventName<span class="token punctuation">,</span> context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 激发 &quot;可取消&quot; 事件</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">dispatchEvent</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/uxmid/uxmid-core/edit/master/docs/guide/event.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/guide/log.html" class="prev">
+          日志(Logger)
+        </a></span> <span class="next"><a href="/guide/exception.html">
+          异常
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.1bce08f9.js" defer></script><script src="/assets/js/2.c5513eae.js" defer></script><script src="/assets/js/12.49092e4e.js" defer></script>
+  </body>
+</html>

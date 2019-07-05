@@ -3,7 +3,5 @@
     "mode": "file",
     "target": "es6",
     "module": "commonjs",
-    "out": "outs",
-    "theme": "markdown",
-    "platform": "vuepress"
+    "out": "docs/typedoc"
 }
