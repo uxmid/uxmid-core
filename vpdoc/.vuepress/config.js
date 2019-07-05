@@ -1,6 +1,7 @@
 module.exports =
 {
     title: "uxmid-core",
+    base: "/uxmid-core/",
     dest: "./docs",
     locales:
     {
