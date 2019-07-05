@@ -92,7 +92,7 @@ export default class CommandCollection implements IEnumerable<KeyValuePair<strin
     /**
      * 对 IEnumerable<T> 进行迭代处理。
      * @param  {Function} callback 每次迭代中执行的回掉函数，当前迭代项将传入该函数。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     public forEach(callback: (item: KeyValuePair<string, ICommand>, source: IEnumerable<KeyValuePair<string, ICommand>>) => void, scope?: any): void

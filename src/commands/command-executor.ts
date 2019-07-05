@@ -54,6 +54,7 @@ export default class CommandExecutor implements ICommandExecutor
 
     /**
      * 初始化命令执行器的新实例。
+     * @param parser 命令行文本解析
      * @constructor
      */
     public constructor(parser?: ICommandExpressionParser)

@@ -4,7 +4,7 @@ import IBroadcastReceiverProvider from "./i-broadcast-receiver-provider";
 import BroadcastReceiverEntry from "./broadcast-receiver-entry";
 import IBroadcastReceiver from "./i-broadcast-receiver";
 import BroadcastContract from "./broadcast-contract";
-import Broadcast from "./Broadcast";
+import Broadcast from "./broadcast";
 
 /**
  * 提供用于检索广播接收器对象的机制。

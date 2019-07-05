@@ -1,0 +1,7 @@
+{
+    "nanme": "uxmid-core",
+    "mode": "file",
+    "target": "es6",
+    "module": "commonjs",
+    "out": "docs/typedoc"
+}

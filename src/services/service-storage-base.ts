@@ -69,14 +69,14 @@ export default abstract class ServiceStorageBase implements IServiceStorage
     /**
      * 添加一个服务项至仓储中。
      * @param  {Function} serviceType 服务类型。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns ServiceEntry
      */
     public add(serviceType: Function, contractTypes?: Array<Function>): ServiceEntry;
     /**
      * 添加一个服务项至仓储中。
      * @param  {any} service 服务实例。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns ServiceEntry
      */
     public add(service: any, contractTypes?: Array<Function>): ServiceEntry;
@@ -98,7 +98,7 @@ export default abstract class ServiceStorageBase implements IServiceStorage
      * 添加一个服务项至仓储中。
      * @param  {string} name 服务名称。
      * @param  {Function} serviceType 服务类型。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns ServiceEntry
      */
     public add(name: string, serviceType: Function, contractTypes?: Array<Function>): ServiceEntry;
@@ -106,7 +106,7 @@ export default abstract class ServiceStorageBase implements IServiceStorage
      * 添加一个服务项至仓储中。
      * @param  {string} name 服务名称。
      * @param  {any} service 服务实例。
-     * @param  {Array<Function>} contractTypes? 契约类型。
+     * @param  {Array<Function>} contractTypes 契约类型。
      * @returns ServiceEntry
      */
     public add(name: string, service: any, contractTypes?: Array<Function>): ServiceEntry;
@@ -268,7 +268,7 @@ export default abstract class ServiceStorageBase implements IServiceStorage
     /**
      * 对 IEnumerable<T> 进行迭代处理。
      * @param  {(item:T,source:IEnumerable<T>)=>void} callback 每次迭代中执行的回掉函数，当前迭代项将传入该函数。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     public abstract forEach(callback: (item: ServiceEntry, source: IEnumerable<ServiceEntry>) => void, scope?: any): void;

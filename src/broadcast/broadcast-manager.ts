@@ -5,7 +5,7 @@ import IBroadcastReceiverProvider from "./i-broadcast-receiver-provider";
 import BroadcastReceiverProvider from "./broadcast-receiver-provider";
 import BroadcastContract from "./broadcast-contract";
 import IBroadcastReceiver from "./i-broadcast-receiver";
-import Broadcast from "./Broadcast";
+import Broadcast from "./broadcast";
 import BroadcastContext from "./broadcast-context";
 
 /**
@@ -58,7 +58,7 @@ export default class BroadcastManager
     
     /**
      * 初始化广播管理器的新实例。
-     * @param  {IBroadcastReceiverProvider} receiverProvider? 广播接收器提供程序。
+     * @param  {IBroadcastReceiverProvider} receiverProvider 广播接收器提供程序。
      */
     protected constructor(receiverProvider?: IBroadcastReceiverProvider)
     {

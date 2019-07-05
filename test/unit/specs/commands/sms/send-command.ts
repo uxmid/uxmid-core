@@ -33,7 +33,7 @@ export default class SendCommand extends CommandBase<CommandContext>
      * @protected
      * @override
      * @async
-     * @param  {newlife.CommandContext} context 执行命令的上下文对象。
+     * @param  {CommandContext} context 执行命令的上下文对象。
      * @returns any 执行的返回结果。
      */
     protected async onExecute(context: CommandContext): Promise<any>

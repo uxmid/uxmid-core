@@ -189,10 +189,10 @@ export default class Application
      * 为指定的事件类型注册一个侦听器，以使侦听器能够接收事件通知。
      * @summary 如果不再需要某个事件侦听器，可调用 removeListener() 删除它，否则会产生内存问题。
      * 由于垃圾回收器不会删除仍包含引用的对象，因此不会从内存中自动删除使用已注册事件侦听器的对象。
-     * @param  {string} type 事件类型。
-     * @param  {Function} 处理事件的侦听器函数。
-     * @param  {any} scope? 侦听函数绑定的 this 对象。
-     * @param  {boolean} once? 是否添加仅回调一次的事件侦听器，如果此参数设为 true 则在第一次回调时就自动移除监听。
+     * @param type 事件类型。
+     * @param listener 处理事件的侦听器函数。
+     * @param scope 侦听函数绑定的 this 对象。
+     * @param once 是否添加仅回调一次的事件侦听器，如果此参数设为 true 则在第一次回调时就自动移除监听。
      * @returns void
      */
     public static addListener(type: string, listener: Function, scope?: any, once?: boolean): void
@@ -202,9 +202,9 @@ export default class Application
     
     /**
      * 移除侦听器。如果没有注册任何匹配的侦听器，则对此方法的调用没有任何效果。
-     * @param  {string} type 事件类型。
-     * @param  {Function} listener 处理事件的侦听器函数。
-     * @param  {any} scope? 侦听函数绑定的 this 对象。
+     * @param type 事件类型。
+     * @param listener 处理事件的侦听器函数。
+     * @param scope 侦听函数绑定的 this 对象。
      * @returns void
      */
     public static removeListener(type: string, listener: Function, scope?: any): void
@@ -214,7 +214,7 @@ export default class Application
     
     /**
      * 派发一个指定参数的事件。
-     * @param  {EventArgs} eventArgs 事件参数实例。
+     * @param eventArgs 事件参数实例。
      * @returns void
      */
     public static dispatchEvent(args: EventArgs): void
@@ -225,8 +225,7 @@ export default class Application
     /**
      * 初始化全局模块。
      * @private
-     * @static
-     * @param  {ApplicationContextBase} context
+     * @param context 应用上下文
      * @returns void
      */
     private static initializeGlobalModules(context: ApplicationContextBase): void
@@ -243,8 +242,7 @@ export default class Application
     /**
      * 卸载全局模块。
      * @private 
-     * @static
-     * @param  {ApplicationContextBase} context
+     * @param context 应用上下文
      * @returns void
      */
     private static disposeGlobalModules(context: ApplicationContextBase): void

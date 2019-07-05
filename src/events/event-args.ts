@@ -60,7 +60,7 @@ export default class EventArgs
      * 初始化 EventArgs 类的新实例。
      * @constructor
      * @param  {string} type 事件类型。
-     * @param  {any?} data 可选数据。
+     * @param  {any} data 可选数据。
      */
     public constructor(type: string, data?: any)
     {

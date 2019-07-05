@@ -113,7 +113,7 @@ export default class ServiceStorage extends ServiceStorageBase
      * 对当前仓储进行迭代处理。
      * @override
      * @param  {Function} callback 每次迭代中执行的回掉函数，当前迭代项及它的索引号将被作为参数传入该方法。
-     * @param  {any} scope? 回掉函数中 this 所引用的对象。
+     * @param  {any} scope 回掉函数中 this 所引用的对象。
      * @returns void
      */
     public forEach(callback: (value: ServiceEntry, source: IEnumerable<ServiceEntry>) => void, scope?: any): void
