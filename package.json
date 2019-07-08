@@ -17,7 +17,7 @@
         "src"
     ],
     "main": "dist/uxmid.js",
-    "typings": "types/uxmid.d.ts",
+    "typings": "dist/uxmid.d.ts",
     "keywords": [
         "uxmid",
         "typescript"
